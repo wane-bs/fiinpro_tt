@@ -1,0 +1,31 @@
+Target,Feature,ElasticNet_Mean_Coef,PLSR_Mean_VIP
+Mảng Tài Sản -> Hiệu quả ROA,     Dự phòng giảm giá HTK,0.051359187848499466,1.8773182499132113
+Mảng Tài Sản -> Hiệu quả ROA,     Đầu tư vào các công ty liên kết,0.07008724168526102,1.7082729244297359
+Mảng Tài Sản -> Hiệu quả ROA,Đầu tư dài hạn,0.055663316582012824,1.6952842204312142
+Mảng Tài Sản -> Hiệu quả ROA,     Phải thu khách hàng,0.12993229413892038,1.6929188926960168
+Mảng Tài Sản -> Hiệu quả ROA,     GTCL tài sản cố định vô hình,0.08578833909642034,1.6857164070561648
+Mảng Tài Sản -> Hiệu quả ROA,     Chi phí trả trước ngắn hạn,-0.11552377314677391,1.367875324375047
+Mảng Tài Sản -> Hiệu quả ROA,Các khoản phải thu,0.015437442660499321,1.3196214397741657
+Mảng Tài Sản -> Hiệu quả ROA,          Nguyên giá TSCĐ vô hình,0.05669676460099974,1.2951668541226127
+Mảng Tài Sản -> Hiệu quả ROA,     Trả trước dài hạn,-0.005850454334899312,1.2903131942573867
+Mảng Tài Sản -> Hiệu quả ROA,     Phải thu thuế khác,0.04849460410105868,1.2772803902852854
+Mảng Nguồn Vốn -> Hiệu quả ROE,     Thuế và các khoản phải trả Nhà nước,0.45715689446320373,2.0203556098988944
+Mảng Nguồn Vốn -> Hiệu quả ROE,     Thặng dư vốn cổ phần,0.07145315988481904,1.7775786317820663
+Mảng Nguồn Vốn -> Hiệu quả ROE,Nợ dài hạn,0.03466135931155777,1.7245422613801356
+Mảng Nguồn Vốn -> Hiệu quả ROE,     Vay dài hạn,0.012788254835275275,1.6635774973844686
+Mảng Nguồn Vốn -> Hiệu quả ROE,     Quỹ khác,0.05719281229528341,1.4505883390651497
+Mảng Nguồn Vốn -> Hiệu quả ROE,Vốn Ngân sách nhà nước và quỹ khác,-0.001490983337613995,1.4072394817633103
+Mảng Nguồn Vốn -> Hiệu quả ROE,     Vốn ngân sách nhà nước,-0.0014920990723090968,1.4072394817633103
+Mảng Nguồn Vốn -> Hiệu quả ROE,Vốn và các quỹ,-0.013028922114873475,1.346425400472265
+Mảng Nguồn Vốn -> Hiệu quả ROE,     Quỹ đầu tư và phát triển,-0.004258288136670649,1.345880420728345
+Mảng Nguồn Vốn -> Hiệu quả ROE,     Cổ phiếu quỹ,-0.02318987322893537,1.3391982917815368
+Cấu trúc KQKD -> Biên LN Gộp (%),Chi phí quản lý doanh  nghiệp,-0.22633148425419516,1.5031482126082796
+Cấu trúc KQKD -> Biên LN Gộp (%),Giá vốn hàng bán,0.5159223542924555,1.4829415214672053
+Cấu trúc KQKD -> Biên LN Gộp (%),Lợi nhuận của Cổ đông của Công ty mẹ,0.12619731579293186,1.4210772728192302
+Cấu trúc KQKD -> Biên LN Gộp (%),     Thuế thu nhập doanh nghiệp – hiện thời,-0.024346079772311867,1.176365778814325
+Cấu trúc KQKD -> Biên LN Gộp (%),Chi phí bán hàng,-0.17848825321420242,1.1721724241908738
+Cấu trúc KQKD -> Biên LN Gộp (%),Lợi ích của cổ đông thiểu số,0.07549589281676052,1.114253903914319
+Cấu trúc KQKD -> Biên LN Gộp (%),Doanh thu thuần,0.0,1.078094808907655
+Cấu trúc KQKD -> Biên LN Gộp (%),Chi phí thuế thu nhập doanh nghiệp,-0.012796091693533195,1.0339569906701342
+Cấu trúc KQKD -> Biên LN Gộp (%),Doanh thu bán hàng và cung cấp dịch vụ,0.0,1.0132943575044324
+Cấu trúc KQKD -> Biên LN Gộp (%),Các khoản giảm trừ doanh thu,-0.03681518530141373,0.7845889708397366

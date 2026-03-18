@@ -1,0 +1,1153 @@
+Target_Name,Quarter,Variable_Type,Variable_Name,Value
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2010,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.6880525677574347
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2010,Feature_Ratio,     Dự phòng giảm giá HTK,-0.03968933248899521
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2010,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.192652976328831
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2010,Feature_Ratio,Đầu tư dài hạn,4.594901135905107
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2010,Feature_Ratio,     Phải thu khách hàng,7.124920056933624
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2010,Feature_Ratio,     GTCL tài sản cố định vô hình,1.0365654474887096
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2010,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,4.4006533524624025
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2010,Feature_Ratio,     Dự phòng giảm giá HTK,-0.0759273015710895
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2010,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.0947745378002347
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2010,Feature_Ratio,Đầu tư dài hạn,3.154278641376509
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2010,Feature_Ratio,     Phải thu khách hàng,8.353762550385552
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2010,Feature_Ratio,     GTCL tài sản cố định vô hình,0.9807412983303287
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2010,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.038985170184546
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2010,Feature_Ratio,     Dự phòng giảm giá HTK,-0.050102887742555335
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2010,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.0562593383407357
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2010,Feature_Ratio,Đầu tư dài hạn,3.0487317817240758
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2010,Feature_Ratio,     Phải thu khách hàng,8.016760846198373
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2010,Feature_Ratio,     GTCL tài sản cố định vô hình,0.9011858981347508
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2010,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.4290657124978434
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2010,Feature_Ratio,     Dự phòng giảm giá HTK,-0.04540755620130609
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2010,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.7110042047414815
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2010,Feature_Ratio,Đầu tư dài hạn,5.047634101228843
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2010,Feature_Ratio,     Phải thu khách hàng,8.935207702139161
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2010,Feature_Ratio,     GTCL tài sản cố định vô hình,0.9284624983140447
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2011,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.275398306837776
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2011,Feature_Ratio,     Dự phòng giảm giá HTK,-0.03736734488261736
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2011,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.7288646805655783
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2011,Feature_Ratio,Đầu tư dài hạn,3.3900183411860865
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2011,Feature_Ratio,     Phải thu khách hàng,9.960212570742845
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2011,Feature_Ratio,     GTCL tài sản cố định vô hình,0.9307756065469961
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2011,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,4.44321640227475
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2011,Feature_Ratio,     Dự phòng giảm giá HTK,-0.04511407453754282
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2011,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.747864552571755
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2011,Feature_Ratio,Đầu tư dài hạn,3.457889701066688
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2011,Feature_Ratio,     Phải thu khách hàng,9.61229599710133
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2011,Feature_Ratio,     GTCL tài sản cố định vô hình,1.019958965492083
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2011,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.8181856445418676
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2011,Feature_Ratio,     Dự phòng giảm giá HTK,-0.03998416051685376
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2011,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.511993345669731
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2011,Feature_Ratio,Đầu tư dài hạn,3.0631515421519184
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2011,Feature_Ratio,     Phải thu khách hàng,8.407914920602954
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2011,Feature_Ratio,     GTCL tài sản cố định vô hình,0.9208782560270976
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2011,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.858186680780122
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2011,Feature_Ratio,     Dự phòng giảm giá HTK,-0.06029935448924428
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2011,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.3003443210551664
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2011,Feature_Ratio,Đầu tư dài hạn,2.835940127547661
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2011,Feature_Ratio,     Phải thu khách hàng,9.833336388925192
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2011,Feature_Ratio,     GTCL tài sản cố định vô hình,0.8717997302946381
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2012,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.2258815018791305
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2012,Feature_Ratio,     Dự phòng giảm giá HTK,-0.0753915857074135
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2012,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.7493480135459774
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2012,Feature_Ratio,Đầu tư dài hạn,2.907846220229561
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2012,Feature_Ratio,     Phải thu khách hàng,8.898283950377797
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2012,Feature_Ratio,     GTCL tài sản cố định vô hình,0.9208718873850167
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2012,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.6758856923643295
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2012,Feature_Ratio,     Dự phòng giảm giá HTK,-0.07326977175488315
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2012,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.7465657681775145
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2012,Feature_Ratio,Đầu tư dài hạn,2.816353562979479
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2012,Feature_Ratio,     Phải thu khách hàng,8.169494296033848
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2012,Feature_Ratio,     GTCL tài sản cố định vô hình,0.8832035322338313
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2012,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.0760237164507256
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2012,Feature_Ratio,     Dự phòng giảm giá HTK,-0.04742800501246789
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2012,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.7369647628909857
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2012,Feature_Ratio,Đầu tư dài hạn,2.7590439819490924
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2012,Feature_Ratio,     Phải thu khách hàng,8.206353866555157
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2012,Feature_Ratio,     GTCL tài sản cố định vô hình,0.9141943160395193
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2012,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.816138955111671
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2012,Feature_Ratio,     Dự phòng giảm giá HTK,-0.03609198921229151
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2012,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.7037564767249405
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2012,Feature_Ratio,Đầu tư dài hạn,2.3296886117498325
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2012,Feature_Ratio,     Phải thu khách hàng,10.801652334627075
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2012,Feature_Ratio,     GTCL tài sản cố định vô hình,0.8999569104778664
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2013,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.3763458510910707
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2013,Feature_Ratio,     Dự phòng giảm giá HTK,-0.029001671042712424
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2013,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.7103834182458423
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2013,Feature_Ratio,Đầu tư dài hạn,2.4026091971097405
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2013,Feature_Ratio,     Phải thu khách hàng,9.121809583349668
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2013,Feature_Ratio,     GTCL tài sản cố định vô hình,0.897619974760033
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2013,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.763989209539662
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2013,Feature_Ratio,     Dự phòng giảm giá HTK,-0.0867851998957648
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2013,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.6624237508759387
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2013,Feature_Ratio,Đầu tư dài hạn,2.1858843820110074
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2013,Feature_Ratio,     Phải thu khách hàng,9.729349692541057
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2013,Feature_Ratio,     GTCL tài sản cố định vô hình,0.8154842780287285
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2013,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.960771956940823
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2013,Feature_Ratio,     Dự phòng giảm giá HTK,-0.05526675498461675
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2013,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.6638555224054268
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2013,Feature_Ratio,Đầu tư dài hạn,2.1663778724906733
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2013,Feature_Ratio,     Phải thu khách hàng,9.960182908291229
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2013,Feature_Ratio,     GTCL tài sản cố định vô hình,0.8133857142302678
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2013,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.072004891498539
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2013,Feature_Ratio,     Dự phòng giảm giá HTK,-0.06774011277176685
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2013,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.6129314864422707
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2013,Feature_Ratio,Đầu tư dài hạn,1.9207421372712512
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2013,Feature_Ratio,     Phải thu khách hàng,10.025954815215558
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2013,Feature_Ratio,     GTCL tài sản cố định vô hình,0.6803742231166281
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2014,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.7567728607758366
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2014,Feature_Ratio,     Dự phòng giảm giá HTK,-0.04823139022714992
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2014,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.639825638346549
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2014,Feature_Ratio,Đầu tư dài hạn,1.9549804906117143
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2014,Feature_Ratio,     Phải thu khách hàng,9.200015325248295
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2014,Feature_Ratio,     GTCL tài sản cố định vô hình,0.7359888695513989
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2014,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.137710902143537
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2014,Feature_Ratio,     Dự phòng giảm giá HTK,-0.06099182506419474
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2014,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.6213154057717206
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2014,Feature_Ratio,Đầu tư dài hạn,1.9046565076576747
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2014,Feature_Ratio,     Phải thu khách hàng,9.507428609933042
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2014,Feature_Ratio,     GTCL tài sản cố định vô hình,0.7294493313198288
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2014,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.525458905472089
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2014,Feature_Ratio,     Dự phòng giảm giá HTK,-0.06481772298759739
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2014,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.5777139629599005
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2014,Feature_Ratio,Đầu tư dài hạn,1.7236519375384733
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2014,Feature_Ratio,     Phải thu khách hàng,9.11336751269087
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2014,Feature_Ratio,     GTCL tài sản cố định vô hình,0.6369936572464154
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2014,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.3550025450379883
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2014,Feature_Ratio,     Dự phòng giảm giá HTK,-0.1678357866160993
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2014,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.5287510265453026
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2014,Feature_Ratio,Đầu tư dài hạn,1.6773856436321153
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2014,Feature_Ratio,     Phải thu khách hàng,8.4346919622889
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2014,Feature_Ratio,     GTCL tài sản cố định vô hình,0.6355750891663049
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2015,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.4648621763989054
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2015,Feature_Ratio,     Dự phòng giảm giá HTK,-0.14286584195216642
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2015,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.5528623160447214
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2015,Feature_Ratio,Đầu tư dài hạn,1.7080046955140278
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2015,Feature_Ratio,     Phải thu khách hàng,7.603478384599313
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2015,Feature_Ratio,     GTCL tài sản cố định vô hình,0.637740484086392
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2015,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.6150002629800855
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2015,Feature_Ratio,     Dự phòng giảm giá HTK,-0.15913456893233788
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2015,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.5399989868376454
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2015,Feature_Ratio,Đầu tư dài hạn,1.648569299335479
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2015,Feature_Ratio,     Phải thu khách hàng,7.978817409903774
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2015,Feature_Ratio,     GTCL tài sản cố định vô hình,0.6334297071762849
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2015,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.192942180638625
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2015,Feature_Ratio,     Dự phòng giảm giá HTK,-0.11198563627327317
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2015,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.5262643530102249
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2015,Feature_Ratio,Đầu tư dài hạn,1.5648833078480129
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2015,Feature_Ratio,     Phải thu khách hàng,7.516996988335335
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2015,Feature_Ratio,     GTCL tài sản cố định vô hình,0.5789520349792352
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2015,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.0047155026343164
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2015,Feature_Ratio,     Dự phòng giảm giá HTK,-0.11563052402252515
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2015,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.49092845040820154
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2015,Feature_Ratio,Đầu tư dài hạn,1.2477512197125094
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2015,Feature_Ratio,     Phải thu khách hàng,8.181096145740941
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2015,Feature_Ratio,     GTCL tài sản cố định vô hình,0.5771647894381146
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2016,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,1.8080600303974717
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2016,Feature_Ratio,     Dự phòng giảm giá HTK,-0.1503312940521662
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2016,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.5248426890871838
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2016,Feature_Ratio,Đầu tư dài hạn,1.3041723150288937
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2016,Feature_Ratio,     Phải thu khách hàng,7.243759909973531
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2016,Feature_Ratio,     GTCL tài sản cố định vô hình,0.5763629909061353
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2016,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.4864940208871276
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2016,Feature_Ratio,     Dự phòng giảm giá HTK,-0.1492414985600065
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2016,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.5118521026834424
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2016,Feature_Ratio,Đầu tư dài hạn,1.3660242636793192
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2016,Feature_Ratio,     Phải thu khách hàng,7.840778668990316
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2016,Feature_Ratio,     GTCL tài sản cố định vô hình,0.5558117793350617
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2016,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.5284780263655113
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2016,Feature_Ratio,     Dự phòng giảm giá HTK,-0.17673282471424934
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2016,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.5033104051996724
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2016,Feature_Ratio,Đầu tư dài hạn,1.328726428285321
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2016,Feature_Ratio,     Phải thu khách hàng,8.062419615159419
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2016,Feature_Ratio,     GTCL tài sản cố định vô hình,0.5419117832656973
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2016,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.779868277538839
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2016,Feature_Ratio,     Dự phòng giảm giá HTK,-0.09986177531327353
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2016,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.45775239192189804
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2016,Feature_Ratio,Đầu tư dài hạn,1.2722674745972655
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2016,Feature_Ratio,     Phải thu khách hàng,7.921574893561864
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2016,Feature_Ratio,     GTCL tài sản cố định vô hình,0.7206236795283905
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2017,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,1.9295148353696254
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2017,Feature_Ratio,     Dự phòng giảm giá HTK,-0.0963461062178232
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2017,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.5047806022946574
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2017,Feature_Ratio,Đầu tư dài hạn,1.3701977630533169
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2017,Feature_Ratio,     Phải thu khách hàng,7.739089524927167
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2017,Feature_Ratio,     GTCL tài sản cố định vô hình,0.700530417106958
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2017,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.390579439181264
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2017,Feature_Ratio,     Dự phòng giảm giá HTK,-0.09069015805926453
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2017,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.5041756636799429
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2017,Feature_Ratio,Đầu tư dài hạn,1.330991793718345
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2017,Feature_Ratio,     Phải thu khách hàng,8.35779822802174
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2017,Feature_Ratio,     GTCL tài sản cố định vô hình,0.6683611691302536
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2017,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.5056857774876686
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2017,Feature_Ratio,     Dự phòng giảm giá HTK,-0.07198046233855307
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2017,Feature_Ratio,     Đầu tư vào các công ty liên kết,0.4847557513221935
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2017,Feature_Ratio,Đầu tư dài hạn,1.242404950611832
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2017,Feature_Ratio,     Phải thu khách hàng,8.852559976582967
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2017,Feature_Ratio,     GTCL tài sản cố định vô hình,0.9333974999145366
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2017,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,6.262655569759487
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2017,Feature_Ratio,     Dự phòng giảm giá HTK,-0.007037784161462592
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2017,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.4566547151593285
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2017,Feature_Ratio,Đầu tư dài hạn,3.282602329632374
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2017,Feature_Ratio,     Phải thu khách hàng,9.266455172213016
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2017,Feature_Ratio,     GTCL tài sản cố định vô hình,1.2088693870986882
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2018,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.6099337252907184
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2018,Feature_Ratio,     Dự phòng giảm giá HTK,-0.0061585297790449365
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2018,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.5976333576301776
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2018,Feature_Ratio,Đầu tư dài hạn,3.404034238275714
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2018,Feature_Ratio,     Phải thu khách hàng,7.901117169917496
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2018,Feature_Ratio,     GTCL tài sản cố định vô hình,1.1868404885939965
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2018,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.887562318341313
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2018,Feature_Ratio,     Dự phòng giảm giá HTK,-0.005876338246278676
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2018,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.6306764482408456
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2018,Feature_Ratio,Đầu tư dài hạn,3.3801348423103965
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2018,Feature_Ratio,     Phải thu khách hàng,7.420886744242891
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2018,Feature_Ratio,     GTCL tài sản cố định vô hình,1.4613585886435532
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2018,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.1703571107996917
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2018,Feature_Ratio,     Dự phòng giảm giá HTK,-0.005567905386796468
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2018,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.635790510279037
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2018,Feature_Ratio,Đầu tư dài hạn,3.3269690360429793
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2018,Feature_Ratio,     Phải thu khách hàng,7.532451254660984
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2018,Feature_Ratio,     GTCL tài sản cố định vô hình,1.369516357256705
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2018,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.1165781529411096
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2018,Feature_Ratio,     Dự phòng giảm giá HTK,-0.09381182290775367
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2018,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.594228869534921
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2018,Feature_Ratio,Đầu tư dài hạn,3.408659198257801
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2018,Feature_Ratio,     Phải thu khách hàng,8.606728144603927
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2018,Feature_Ratio,     GTCL tài sản cố định vô hình,2.0175002967575337
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2019,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.7616319791342976
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2019,Feature_Ratio,     Dự phòng giảm giá HTK,-0.09646893053613587
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2019,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.7411857513499287
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2019,Feature_Ratio,Đầu tư dài hạn,3.6436994263914197
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2019,Feature_Ratio,     Phải thu khách hàng,7.853995582546629
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2019,Feature_Ratio,     GTCL tài sản cố định vô hình,2.094728348813766
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2019,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.246560175877032
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2019,Feature_Ratio,     Dự phòng giảm giá HTK,-0.10877407563305883
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2019,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.7037948146313844
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2019,Feature_Ratio,Đầu tư dài hạn,3.559787725762932
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2019,Feature_Ratio,     Phải thu khách hàng,8.184105375323043
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2019,Feature_Ratio,     GTCL tài sản cố định vô hình,1.9518346062654988
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2019,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.5930175148183467
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2019,Feature_Ratio,     Dự phòng giảm giá HTK,-0.09473148293837962
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2019,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.7028980008761825
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2019,Feature_Ratio,Đầu tư dài hạn,3.5630436105460475
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2019,Feature_Ratio,     Phải thu khách hàng,8.028243853599037
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2019,Feature_Ratio,     GTCL tài sản cố định vô hình,1.8114370613731767
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2019,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.8875414305281852
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2019,Feature_Ratio,     Dự phòng giảm giá HTK,-0.0912701341014886
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2019,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.654781161045186
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2019,Feature_Ratio,Đầu tư dài hạn,3.4651306391351597
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2019,Feature_Ratio,     Phải thu khách hàng,7.967606643939913
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2019,Feature_Ratio,     GTCL tài sản cố định vô hình,1.6571371346994588
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2020,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.7224092505852266
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2020,Feature_Ratio,     Dự phòng giảm giá HTK,-0.1029583575856066
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2020,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.6864888916740313
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2020,Feature_Ratio,Đầu tư dài hạn,3.505263342148094
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2020,Feature_Ratio,     Phải thu khách hàng,7.441439285324257
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2020,Feature_Ratio,     GTCL tài sản cố định vô hình,1.5788902049980909
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2020,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.0190398042808075
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2020,Feature_Ratio,     Dự phòng giảm giá HTK,-0.09791045094848197
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2020,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.466126823312992
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2020,Feature_Ratio,Đầu tư dài hạn,3.19827624640891
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2020,Feature_Ratio,     Phải thu khách hàng,6.530193566332287
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2020,Feature_Ratio,     GTCL tài sản cố định vô hình,1.4893334444582242
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2020,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.0421312063384067
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2020,Feature_Ratio,     Dự phòng giảm giá HTK,-0.0996360938545933
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2020,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.3813065826207196
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2020,Feature_Ratio,Đầu tư dài hạn,3.1529341772082846
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2020,Feature_Ratio,     Phải thu khách hàng,6.41291731851426
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2020,Feature_Ratio,     GTCL tài sản cố định vô hình,1.3726724446405594
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2020,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.0002529060107963
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2020,Feature_Ratio,     Dự phòng giảm giá HTK,-0.1288923012514452
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2020,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.220259921368429
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2020,Feature_Ratio,Đầu tư dài hạn,2.920460387842274
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2020,Feature_Ratio,     Phải thu khách hàng,6.263411817519131
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2020,Feature_Ratio,     GTCL tài sản cố định vô hình,1.2277780952719526
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2021,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.5873441113548785
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2021,Feature_Ratio,     Dự phòng giảm giá HTK,-0.12901014113382842
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2021,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.2307105967380796
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2021,Feature_Ratio,Đầu tư dài hạn,2.961605369809223
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2021,Feature_Ratio,     Phải thu khách hàng,5.573068869540485
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2021,Feature_Ratio,     GTCL tài sản cố định vô hình,1.1455321050772744
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2021,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.6812537578842317
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2021,Feature_Ratio,     Dự phòng giảm giá HTK,-0.1277530363598837
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2021,Feature_Ratio,     Đầu tư vào các công ty liên kết,1.9893738132945749
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2021,Feature_Ratio,Đầu tư dài hạn,2.677806880913584
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2021,Feature_Ratio,     Phải thu khách hàng,5.59189752052633
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2021,Feature_Ratio,     GTCL tài sản cố định vô hình,1.0759288163936283
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2021,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.849245624434575
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2021,Feature_Ratio,     Dự phòng giảm giá HTK,-0.11881252068349636
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2021,Feature_Ratio,     Đầu tư vào các công ty liên kết,1.6421844781749086
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2021,Feature_Ratio,Đầu tư dài hạn,2.714505795968363
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2021,Feature_Ratio,     Phải thu khách hàng,5.7417997816915145
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2021,Feature_Ratio,     GTCL tài sản cố định vô hình,1.0642751762322105
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2021,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.90486440224752
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2021,Feature_Ratio,     Dự phòng giảm giá HTK,-0.10157795679206595
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2021,Feature_Ratio,     Đầu tư vào các công ty liên kết,1.7661868518236372
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2021,Feature_Ratio,Đầu tư dài hạn,2.715630740613112
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2021,Feature_Ratio,     Phải thu khách hàng,5.440929940576491
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2021,Feature_Ratio,     GTCL tài sản cố định vô hình,0.9924249120293562
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2022,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.767126186546268
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2022,Feature_Ratio,     Dự phòng giảm giá HTK,-0.09075482238096379
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2022,Feature_Ratio,     Đầu tư vào các công ty liên kết,1.8865432483660447
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2022,Feature_Ratio,Đầu tư dài hạn,2.805081067187857
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2022,Feature_Ratio,     Phải thu khách hàng,5.577704991958909
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2022,Feature_Ratio,     GTCL tài sản cố định vô hình,0.9460692116070313
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2022,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,2.773885785780271
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2022,Feature_Ratio,     Dự phòng giảm giá HTK,-0.08353015363839068
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2022,Feature_Ratio,     Đầu tư vào các công ty liên kết,1.683648173381414
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2022,Feature_Ratio,Đầu tư dài hạn,2.6208087405083935
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2022,Feature_Ratio,     Phải thu khách hàng,5.408926660813678
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2022,Feature_Ratio,     GTCL tài sản cố định vô hình,0.9093594024142665
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2022,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.1853614888031156
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2022,Feature_Ratio,     Dự phòng giảm giá HTK,-0.09207789548164447
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2022,Feature_Ratio,     Đầu tư vào các công ty liên kết,1.7935049721162764
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2022,Feature_Ratio,Đầu tư dài hạn,2.8557201587715806
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2022,Feature_Ratio,     Phải thu khách hàng,6.030286975795771
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2022,Feature_Ratio,     GTCL tài sản cố định vô hình,1.0045850294219176
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2022,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.1359580934540303
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2022,Feature_Ratio,     Dự phòng giảm giá HTK,-0.139692897134006
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2022,Feature_Ratio,     Đầu tư vào các công ty liên kết,1.9843982483285278
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2022,Feature_Ratio,Đầu tư dài hạn,2.9243344760318513
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2022,Feature_Ratio,     Phải thu khách hàng,7.174079716447864
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2022,Feature_Ratio,     GTCL tài sản cố định vô hình,1.1574893195288227
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2023,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.5667284771833083
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2023,Feature_Ratio,     Dự phòng giảm giá HTK,-0.13855243481288101
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2023,Feature_Ratio,     Đầu tư vào các công ty liên kết,2.0664871615383578
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2023,Feature_Ratio,Đầu tư dài hạn,2.9895380670223037
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2023,Feature_Ratio,     Phải thu khách hàng,7.267464199215902
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2023,Feature_Ratio,     GTCL tài sản cố định vô hình,1.1395240060642262
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2023,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.0658419147511813
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2023,Feature_Ratio,     Dự phòng giảm giá HTK,-0.11691632179681737
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2023,Feature_Ratio,     Đầu tư vào các công ty liên kết,1.5236195415739733
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2023,Feature_Ratio,Đầu tư dài hạn,2.364641020857803
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2023,Feature_Ratio,     Phải thu khách hàng,6.24292524415441
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2023,Feature_Ratio,     GTCL tài sản cố định vô hình,0.9289866715899332
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2023,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.3421025756046316
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2023,Feature_Ratio,     Dự phòng giảm giá HTK,-0.10446418708895751
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2023,Feature_Ratio,     Đầu tư vào các công ty liên kết,1.513451760326233
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2023,Feature_Ratio,Đầu tư dài hạn,2.424301276441469
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2023,Feature_Ratio,     Phải thu khách hàng,6.714163922294363
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2023,Feature_Ratio,     GTCL tài sản cố định vô hình,0.8890066000235965
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2023,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.4003006786328767
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2023,Feature_Ratio,     Dự phòng giảm giá HTK,-0.10177521149850036
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2023,Feature_Ratio,     Đầu tư vào các công ty liên kết,1.655691373923144
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2023,Feature_Ratio,Đầu tư dài hạn,2.605312778745224
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2023,Feature_Ratio,     Phải thu khách hàng,6.997766863015134
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2023,Feature_Ratio,     GTCL tài sản cố định vô hình,0.9725987402119054
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2024,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.482911023849708
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2024,Feature_Ratio,     Dự phòng giảm giá HTK,-0.10580948182480768
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2024,Feature_Ratio,     Đầu tư vào các công ty liên kết,1.6499134161750486
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2024,Feature_Ratio,Đầu tư dài hạn,2.5778403589463394
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2024,Feature_Ratio,     Phải thu khách hàng,7.089797896338856
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2024,Feature_Ratio,     GTCL tài sản cố định vô hình,1.1418519921027592
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2024,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.5041272671750674
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2024,Feature_Ratio,     Dự phòng giảm giá HTK,-0.0985552479027978
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2024,Feature_Ratio,     Đầu tư vào các công ty liên kết,1.409765625999662
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2024,Feature_Ratio,Đầu tư dài hạn,2.221459125890482
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2024,Feature_Ratio,     Phải thu khách hàng,7.397381184067569
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2024,Feature_Ratio,     GTCL tài sản cố định vô hình,1.0866462350477617
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2024,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.667563500220085
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2024,Feature_Ratio,     Dự phòng giảm giá HTK,-0.09358022645146899
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2024,Feature_Ratio,     Đầu tư vào các công ty liên kết,1.462844846748074
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2024,Feature_Ratio,Đầu tư dài hạn,2.230479268310871
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2024,Feature_Ratio,     Phải thu khách hàng,7.494627693396742
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2024,Feature_Ratio,     GTCL tài sản cố định vô hình,1.0686999298858908
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2024,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.473398102245459
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2024,Feature_Ratio,     Dự phòng giảm giá HTK,-0.08701886234400988
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2024,Feature_Ratio,     Đầu tư vào các công ty liên kết,1.4873233217858204
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2024,Feature_Ratio,Đầu tư dài hạn,2.1633490670510023
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2024,Feature_Ratio,     Phải thu khách hàng,6.86998076862102
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2024,Feature_Ratio,     GTCL tài sản cố định vô hình,1.3297372408838353
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2025,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.5076204031944407
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2025,Feature_Ratio,     Dự phòng giảm giá HTK,-0.08289967949911768
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2025,Feature_Ratio,     Đầu tư vào các công ty liên kết,1.5807279907641705
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2025,Feature_Ratio,Đầu tư dài hạn,2.232772422488821
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2025,Feature_Ratio,     Phải thu khách hàng,6.873041254047078
+Mảng Tài Sản -> Hiệu quả ROA,Q1/2025,Feature_Ratio,     GTCL tài sản cố định vô hình,1.252757852896838
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2025,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.3719745728128325
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2025,Feature_Ratio,     Dự phòng giảm giá HTK,-0.04822371071377338
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2025,Feature_Ratio,     Đầu tư vào các công ty liên kết,1.5838302687618866
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2025,Feature_Ratio,Đầu tư dài hạn,2.197385855487961
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2025,Feature_Ratio,     Phải thu khách hàng,6.438420459376158
+Mảng Tài Sản -> Hiệu quả ROA,Q2/2025,Feature_Ratio,     GTCL tài sản cố định vô hình,1.0465149140834362
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2025,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.5068953311154742
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2025,Feature_Ratio,     Dự phòng giảm giá HTK,-0.0475956991600901
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2025,Feature_Ratio,     Đầu tư vào các công ty liên kết,1.6577412632406388
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2025,Feature_Ratio,Đầu tư dài hạn,2.255986742780665
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2025,Feature_Ratio,     Phải thu khách hàng,6.48792276211825
+Mảng Tài Sản -> Hiệu quả ROA,Q3/2025,Feature_Ratio,     GTCL tài sản cố định vô hình,1.0377692988185339
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2025,Target_Performance,Mảng Tài Sản -> Hiệu quả ROA,3.3921686825043387
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2025,Feature_Ratio,     Dự phòng giảm giá HTK,-0.04453765713717404
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2025,Feature_Ratio,     Đầu tư vào các công ty liên kết,1.9072926502248313
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2025,Feature_Ratio,Đầu tư dài hạn,2.5233646683995175
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2025,Feature_Ratio,     Phải thu khách hàng,6.781806289790623
+Mảng Tài Sản -> Hiệu quả ROA,Q4/2025,Feature_Ratio,     GTCL tài sản cố định vô hình,1.034800706289823
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2010,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,11.671657719605214
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2010,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,1.9328698782478604
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2010,Feature_Ratio,     Thặng dư vốn cổ phần,0.2770463984981354
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2010,Feature_Ratio,Nợ dài hạn,9.673355103846202
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2010,Feature_Ratio,     Vay dài hạn,9.55739223691833
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2010,Feature_Ratio,     Quỹ khác,0.5654674166923139
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2010,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,13.664367715425097
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2010,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,1.7689689601176297
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2010,Feature_Ratio,     Thặng dư vốn cổ phần,0.24473916347998662
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2010,Feature_Ratio,Nợ dài hạn,9.163943277048183
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2010,Feature_Ratio,     Vay dài hạn,8.350305342528504
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2010,Feature_Ratio,     Quỹ khác,0.42179373612491
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2010,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,9.815314400315128
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2010,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,1.4914522047380383
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2010,Feature_Ratio,     Thặng dư vốn cổ phần,0.2593961736825365
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2010,Feature_Ratio,Nợ dài hạn,8.810639521926793
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2010,Feature_Ratio,     Vay dài hạn,7.889739384199329
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2010,Feature_Ratio,     Quỹ khác,0.3985724025603659
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2010,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,10.76595690484583
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2010,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.9856266028214085
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2010,Feature_Ratio,     Thặng dư vốn cổ phần,0.25015872719435156
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2010,Feature_Ratio,Nợ dài hạn,8.812402065009865
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2010,Feature_Ratio,     Vay dài hạn,7.8012253215230185
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2010,Feature_Ratio,     Quỹ khác,0.4708238317412021
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2011,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,9.739013851082902
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2011,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,1.1520481133307707
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2011,Feature_Ratio,     Thặng dư vốn cổ phần,0.2497923181122741
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2011,Feature_Ratio,Nợ dài hạn,8.042492348904196
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2011,Feature_Ratio,     Vay dài hạn,7.9807630344498754
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2011,Feature_Ratio,     Quỹ khác,0.4701456113008244
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2011,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,12.047053864635986
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2011,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,1.0180474098318733
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2011,Feature_Ratio,     Thặng dư vốn cổ phần,0.2595762010748962
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2011,Feature_Ratio,Nợ dài hạn,8.333322711728124
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2011,Feature_Ratio,     Vay dài hạn,8.277185372306734
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2011,Feature_Ratio,     Quỹ khác,0.4895370098592342
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2011,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,9.899431138384397
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2011,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,1.2884228708555154
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2011,Feature_Ratio,     Thặng dư vốn cổ phần,0.20757744616500748
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2011,Feature_Ratio,Nợ dài hạn,7.45696904633922
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2011,Feature_Ratio,     Vay dài hạn,7.415775530808677
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2011,Feature_Ratio,     Quỹ khác,0.4367418056492989
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2011,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,10.483292146880405
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2011,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,1.1741635492093159
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2011,Feature_Ratio,     Thặng dư vốn cổ phần,0.17655930447890705
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2011,Feature_Ratio,Nợ dài hạn,0.8291916342136465
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2011,Feature_Ratio,     Vay dài hạn,0.0009784729496883947
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2011,Feature_Ratio,     Quỹ khác,0.4212962814454696
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2012,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,7.858958039540415
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2012,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.8456151599795377
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2012,Feature_Ratio,     Thặng dư vốn cổ phần,0.18843978772052675
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2012,Feature_Ratio,Nợ dài hạn,0.9805550500519218
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2012,Feature_Ratio,     Vay dài hạn,0.0008675942543041887
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2012,Feature_Ratio,     Quỹ khác,0.4392107295305743
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2012,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,8.695557257383273
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2012,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.7805246025016019
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2012,Feature_Ratio,     Thặng dư vốn cổ phần,0.18030814966449343
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2012,Feature_Ratio,Nợ dài hạn,0.9976736820589616
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2012,Feature_Ratio,     Vay dài hạn,0.0007685435524351096
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2012,Feature_Ratio,     Quỹ khác,0.5338315520660732
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2012,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,7.345220189465174
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2012,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.938300190512172
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2012,Feature_Ratio,     Thặng dư vốn cổ phần,0.17728302489285006
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2012,Feature_Ratio,Nợ dài hạn,1.0806611797980326
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2012,Feature_Ratio,     Vay dài hạn,0.0016895292042171737
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2012,Feature_Ratio,     Quỹ khác,0.0
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2012,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,8.809648180797828
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2012,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,1.0809499855131646
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2012,Feature_Ratio,     Thặng dư vốn cổ phần,0.18183294814780113
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2012,Feature_Ratio,Nợ dài hạn,2.542757005316321
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2012,Feature_Ratio,     Vay dài hạn,0.08015255606828749
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2012,Feature_Ratio,     Quỹ khác,0.4244870351353026
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2013,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,7.270527562429903
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2013,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.9056659958570847
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2013,Feature_Ratio,     Thặng dư vốn cổ phần,0.18800600712105864
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2013,Feature_Ratio,Nợ dài hạn,0.9078609846485166
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2013,Feature_Ratio,     Vay dài hạn,0.1175071608680275
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2013,Feature_Ratio,     Quỹ khác,0.4388979740106021
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2013,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,8.35928828975434
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2013,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.9374659738805011
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2013,Feature_Ratio,     Thặng dư vốn cổ phần,0.17232097933800974
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2013,Feature_Ratio,Nợ dài hạn,0.8992045828252717
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2013,Feature_Ratio,     Vay dài hạn,0.16739390672911314
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2013,Feature_Ratio,     Quỹ khác,0.4004236635301508
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2013,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.736705611063289
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2013,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.5680957929331852
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2013,Feature_Ratio,     Thặng dư vốn cổ phần,0.16985265199169208
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2013,Feature_Ratio,Nợ dài hạn,0.9663681715748591
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2013,Feature_Ratio,     Vay dài hạn,0.2967790689563849
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2013,Feature_Ratio,     Quỹ khác,0.3946879911634265
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2013,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,7.506926179328934
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2013,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.596645666896841
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2013,Feature_Ratio,     Thặng dư vốn cổ phần,0.15107377208621275
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2013,Feature_Ratio,Nợ dài hạn,0.8775657341486458
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2013,Feature_Ratio,     Vay dài hạn,0.2862012916377383
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2013,Feature_Ratio,     Quỹ khác,0.35105135494513157
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2014,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.350056164724512
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2014,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.4204328359764036
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2014,Feature_Ratio,     Thặng dư vốn cổ phần,0.1549896023417888
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2014,Feature_Ratio,Nợ dài hạn,0.9313381633986388
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2014,Feature_Ratio,     Vay dài hạn,0.3244285187656306
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2014,Feature_Ratio,     Quỹ khác,0.3601506016109965
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2014,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,7.3467546368893215
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2014,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.4585610543666672
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2014,Feature_Ratio,     Thặng dư vốn cổ phần,0.14640980888438881
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2014,Feature_Ratio,Nợ dài hạn,0.842013880141298
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2014,Feature_Ratio,     Vay dài hạn,0.24921494794040547
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2014,Feature_Ratio,     Quỹ khác,0.34021366565727706
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2014,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.602866480558318
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2014,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.4440857198377694
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2014,Feature_Ratio,     Thặng dư vốn cổ phần,0.13007446310207177
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2014,Feature_Ratio,Nợ dài hạn,0.834044097096606
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2014,Feature_Ratio,     Vay dài hạn,0.2888544460634439
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2014,Feature_Ratio,     Quỹ khác,0.22930828375603557
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2014,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.746357360731061
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2014,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.5960629602505387
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2014,Feature_Ratio,     Thặng dư vốn cổ phần,0.11463698167829782
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2014,Feature_Ratio,Nợ dài hạn,0.7933646562275811
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2014,Feature_Ratio,     Vay dài hạn,0.3300553970171322
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2014,Feature_Ratio,     Quỹ khác,0.20209354624278536
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2015,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.53093790433349
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2015,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.37985680989590276
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2015,Feature_Ratio,     Thặng dư vốn cổ phần,0.11867682161018074
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2015,Feature_Ratio,Nợ dài hạn,1.2453711122647595
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2015,Feature_Ratio,     Vay dài hạn,0.41204138977961946
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2015,Feature_Ratio,     Quỹ khác,0.20921538045487703
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2015,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,5.950185663010877
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2015,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.3819565444653296
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2015,Feature_Ratio,     Thặng dư vốn cổ phần,0.11032238920689585
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2015,Feature_Ratio,Nợ dài hạn,0.7092033146243806
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2015,Feature_Ratio,     Vay dài hạn,0.3062842461234538
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2015,Feature_Ratio,     Quỹ khác,0.19448735075183132
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2015,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,5.206754708211756
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2015,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.39758646538328507
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2015,Feature_Ratio,     Thặng dư vốn cổ phần,0.10509092856074134
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2015,Feature_Ratio,Nợ dài hạn,1.4849040424818292
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2015,Feature_Ratio,     Vay dài hạn,1.1035932879828307
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2015,Feature_Ratio,     Quỹ khác,0.18531881469597392
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2015,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,7.670497189838868
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2015,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.6173715728912703
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2015,Feature_Ratio,     Thặng dư vốn cổ phần,0.09594780466338172
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2015,Feature_Ratio,Nợ dài hạn,1.9397164304553398
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2015,Feature_Ratio,     Vay dài hạn,1.321310504174006
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2015,Feature_Ratio,     Quỹ khác,0.16919429859257631
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2016,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,4.195298867246131
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2016,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.35673803719481423
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2016,Feature_Ratio,     Thặng dư vốn cổ phần,0.10171173796425026
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2016,Feature_Ratio,Nợ dài hạn,2.2706489909259715
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2016,Feature_Ratio,     Vay dài hạn,1.6277061520039544
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2016,Feature_Ratio,     Quỹ khác,0.1793599122714124
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2016,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,5.776048682877951
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2016,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.37078861799160706
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2016,Feature_Ratio,     Thặng dư vốn cổ phần,0.09692832809501464
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2016,Feature_Ratio,Nợ dài hạn,2.2111307060933885
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2016,Feature_Ratio,     Vay dài hạn,1.6742860431673758
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2016,Feature_Ratio,     Quỹ khác,0.17092381244252078
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2016,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.088189382005509
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2016,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.4178473717358309
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2016,Feature_Ratio,     Thặng dư vốn cổ phần,0.09308637089726571
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2016,Feature_Ratio,Nợ dài hạn,2.046786294737791
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2016,Feature_Ratio,     Vay dài hạn,1.500094312670753
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2016,Feature_Ratio,     Quỹ khác,0.1641490748289553
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2016,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,7.263505025016938
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2016,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.573745085131472
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2016,Feature_Ratio,     Thặng dư vốn cổ phần,0.08279062452498141
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2016,Feature_Ratio,Nợ dài hạn,1.6611513784339833
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2016,Feature_Ratio,     Vay dài hạn,1.2787361033485207
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2016,Feature_Ratio,     Quỹ khác,0.14599194915865474
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2017,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,4.510170406535197
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2017,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.3877036935248648
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2017,Feature_Ratio,     Thặng dư vốn cổ phần,0.0889948397491624
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2017,Feature_Ratio,Nợ dài hạn,2.1372216608797805
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2017,Feature_Ratio,     Vay dài hạn,1.8328698014166804
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2017,Feature_Ratio,     Quỹ khác,0.15693292877745108
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2017,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,5.518063920573871
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2017,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.42643295985971613
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2017,Feature_Ratio,     Thặng dư vốn cổ phần,0.08664180936148788
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2017,Feature_Ratio,Nợ dài hạn,2.027031273670747
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2017,Feature_Ratio,     Vay dài hạn,1.694237591185192
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2017,Feature_Ratio,     Quỹ khác,0.15278644842778494
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2017,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,5.708479245613369
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2017,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.7332699465656521
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2017,Feature_Ratio,     Thặng dư vốn cổ phần,0.08276536172962083
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2017,Feature_Ratio,Nợ dài hạn,1.4908444338280376
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2017,Feature_Ratio,     Vay dài hạn,1.1143900595450051
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2017,Feature_Ratio,     Quỹ khác,0.1459521271287993
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2017,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,11.841714003704654
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2017,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.64497615299743
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2017,Feature_Ratio,     Thặng dư vốn cổ phần,0.09922380903409861
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2017,Feature_Ratio,Nợ dài hạn,1.3258189022855855
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2017,Feature_Ratio,     Vay dài hạn,1.1337607146010942
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2017,Feature_Ratio,     Quỹ khác,0.1749763406071889
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2018,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,4.696231064933875
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2018,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.40656254663673536
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2018,Feature_Ratio,     Thặng dư vốn cổ phần,0.10031215084276325
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2018,Feature_Ratio,Nợ dài hạn,1.1906399010439184
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2018,Feature_Ratio,     Vay dài hạn,0.9977103377229594
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2018,Feature_Ratio,     Quỹ khác,0.17689745455295997
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2018,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,5.466314111487309
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2018,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.45144981013291996
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2018,Feature_Ratio,     Thặng dư vốn cổ phần,0.09153847816533511
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2018,Feature_Ratio,Nợ dài hạn,0.9232523643200421
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2018,Feature_Ratio,     Vay dài hạn,0.7492174893032383
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2018,Feature_Ratio,     Quỹ khác,0.16142323603565023
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2018,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.285039504550801
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2018,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.5350914992089929
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2018,Feature_Ratio,     Thặng dư vốn cổ phần,0.08599441918891669
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2018,Feature_Ratio,Nợ dài hạn,0.9665497806220013
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2018,Feature_Ratio,     Vay dài hạn,0.5250549947187818
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2018,Feature_Ratio,     Quỹ khác,0.1516781911681216
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2018,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.275444104704678
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2018,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.6372769068134218
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2018,Feature_Ratio,     Thặng dư vốn cổ phần,0.08203443342309702
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2018,Feature_Ratio,Nợ dài hạn,0.8805269871043846
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2018,Feature_Ratio,     Vay dài hạn,0.6082938374750656
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2018,Feature_Ratio,     Quỹ khác,0.1446636040311864
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2019,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,5.111278777845821
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2019,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.5083214968055711
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2019,Feature_Ratio,     Thặng dư vốn cổ phần,0.08569811346478104
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2019,Feature_Ratio,Nợ dài hạn,0.8772940823301416
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2019,Feature_Ratio,     Vay dài hạn,0.6009453322818673
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2019,Feature_Ratio,     Quỹ khác,0.15112326012927735
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2019,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.239418139568978
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2019,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.5878533466410959
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2019,Feature_Ratio,     Thặng dư vốn cổ phần,0.07956790339014157
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2019,Feature_Ratio,Nợ dài hạn,0.7306455083735155
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2019,Feature_Ratio,     Vay dài hạn,0.44723111978786056
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2019,Feature_Ratio,     Quỹ khác,0.14031397796478215
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2019,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,7.136192552958488
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2019,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.6846536295299499
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2019,Feature_Ratio,     Thặng dư vốn cổ phần,0.07530383239303239
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2019,Feature_Ratio,Nợ dài hạn,0.9457663291430902
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2019,Feature_Ratio,     Vay dài hạn,0.6630268330573551
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2019,Feature_Ratio,     Quỹ khác,0.13279271062656353
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2019,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,5.759531699044378
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2019,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.8017141022215689
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2019,Feature_Ratio,     Thặng dư vốn cổ phần,0.11104426286510606
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2019,Feature_Ratio,Nợ dài hạn,0.7233573162733778
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2019,Feature_Ratio,     Vay dài hạn,0.5135988897390462
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2019,Feature_Ratio,     Quỹ khác,0.1512233493333179
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2020,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,5.31438419382451
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2020,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.4925949327938519
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2020,Feature_Ratio,     Thặng dư vốn cổ phần,0.07241728124100462
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2020,Feature_Ratio,Nợ dài hạn,1.3743875415488762
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2020,Feature_Ratio,     Vay dài hạn,1.1295354226461853
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2020,Feature_Ratio,     Quỹ khác,0.1493335397677207
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2020,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.055845519622316
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2020,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.6274857015273398
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2020,Feature_Ratio,     Thặng dư vốn cổ phần,0.06736156790015987
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2020,Feature_Ratio,Nợ dài hạn,1.3761863532967558
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2020,Feature_Ratio,     Vay dài hạn,1.0866672603185046
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2020,Feature_Ratio,     Quỹ khác,0.11796826695090626
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2020,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.317617502385291
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2020,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.7028922682934667
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2020,Feature_Ratio,     Thặng dư vốn cổ phần,0.06413640653994544
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2020,Feature_Ratio,Nợ dài hạn,1.3214055419308302
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2020,Feature_Ratio,     Vay dài hạn,0.9715519894568986
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2020,Feature_Ratio,     Quỹ khác,0.11250314839817636
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2020,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.7333655504149394
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2020,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.7521203730424747
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2020,Feature_Ratio,     Thặng dư vốn cổ phần,0.05852185306303733
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2020,Feature_Ratio,Nợ dài hạn,0.90003057889431
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2020,Feature_Ratio,     Vay dài hạn,0.7978951399781967
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2020,Feature_Ratio,     Quỹ khác,0.10265453078645091
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2021,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,5.832159665857782
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2021,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.5189823923581176
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2021,Feature_Ratio,     Thặng dư vốn cổ phần,0.05554901885173885
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2021,Feature_Ratio,Nợ dài hạn,1.9844224833287596
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2021,Feature_Ratio,     Vay dài hạn,1.870885246646065
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2021,Feature_Ratio,     Quỹ khác,0.0974398138030698
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2021,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.280267627070184
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2021,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.6005448415487904
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2021,Feature_Ratio,     Thặng dư vốn cổ phần,0.05117921901063417
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2021,Feature_Ratio,Nợ dài hạn,1.9903265132460788
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2021,Feature_Ratio,     Vay dài hạn,1.8531159518511524
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2021,Feature_Ratio,     Quỹ khác,0.08977464722271364
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2021,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.763462240605842
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2021,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.5603233870568504
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2021,Feature_Ratio,     Thặng dư vốn cổ phần,0.049975082106822444
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2021,Feature_Ratio,Nợ dài hạn,2.040253869949639
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2021,Feature_Ratio,     Vay dài hạn,1.8281316341523395
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2021,Feature_Ratio,     Quỹ khác,0.08766244293673014
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2021,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,7.2819879636339975
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2021,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.4736949699500159
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2021,Feature_Ratio,     Thặng dư vốn cổ phần,0.04541224107271568
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2021,Feature_Ratio,Nợ dài hạn,2.2516290063766293
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2021,Feature_Ratio,     Vay dài hạn,2.097641808965574
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2021,Feature_Ratio,     Quỹ khác,0.07965865835210914
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2022,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.701211665223934
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2022,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.5380143874054201
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2022,Feature_Ratio,     Thặng dư vốn cổ phần,0.044373406620748825
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2022,Feature_Ratio,Nợ dài hạn,2.2352826502542706
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2022,Feature_Ratio,     Vay dài hạn,1.9891197773976215
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2022,Feature_Ratio,     Quỹ khác,0.07783641490543311
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2022,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.670067028336628
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2022,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.5618556725267638
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2022,Feature_Ratio,     Thặng dư vốn cổ phần,0.04250222211407064
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2022,Feature_Ratio,Nợ dài hạn,2.1098545911715396
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2022,Feature_Ratio,     Vay dài hạn,1.831669832496132
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2022,Feature_Ratio,     Quỹ khác,0.07455412705065484
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2022,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,7.299693934228335
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2022,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.684231793909138
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2022,Feature_Ratio,     Thặng dư vốn cổ phần,0.04350454901760209
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2022,Feature_Ratio,Nợ dài hạn,2.077050298209378
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2022,Feature_Ratio,     Vay dài hạn,1.8224314551389298
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2022,Feature_Ratio,     Quỹ khác,0.0763123317654957
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2022,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.391876253073467
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2022,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.6302169170059572
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2022,Feature_Ratio,     Thặng dư vốn cổ phần,0.04664534740802685
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2022,Feature_Ratio,Nợ dài hạn,1.6684619559812774
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2022,Feature_Ratio,     Vay dài hạn,1.3866315333345753
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2022,Feature_Ratio,     Quỹ khác,0.08182167858533411
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2023,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.6878070596361
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2023,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.6231902535753276
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2023,Feature_Ratio,     Thặng dư vốn cổ phần,0.04815050739896572
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2023,Feature_Ratio,Nợ dài hạn,0.6164701466044287
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2023,Feature_Ratio,     Vay dài hạn,0.30301126057346917
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2023,Feature_Ratio,     Quỹ khác,0.08446191440394248
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2023,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.489109910626328
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2023,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.6674302200964625
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2023,Feature_Ratio,     Thặng dư vốn cổ phần,0.040941164882907846
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2023,Feature_Ratio,Nợ dài hạn,0.5288215573634446
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2023,Feature_Ratio,     Vay dài hạn,0.17668250803991054
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2023,Feature_Ratio,     Quỹ khác,0.0718158405951115
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2023,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,7.307943823182474
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2023,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.831739757378947
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2023,Feature_Ratio,     Thặng dư vốn cổ phần,0.03867641017514957
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2023,Feature_Ratio,Nợ dài hạn,0.5108327791304863
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2023,Feature_Ratio,     Vay dài hạn,0.13386901292080436
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2023,Feature_Ratio,     Quỹ khác,0.06784318218286152
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2023,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.8492602485288545
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2023,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,1.149622171082183
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2023,Feature_Ratio,     Thặng dư vốn cổ phần,0.039875512758170605
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2023,Feature_Ratio,Nợ dài hạn,0.5692105550326706
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2023,Feature_Ratio,     Vay dài hạn,0.16689923315596109
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2023,Feature_Ratio,     Quỹ khác,0.06994655565075658
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2024,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.808895926293662
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2024,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.759356157711236
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2024,Feature_Ratio,     Thặng dư vốn cổ phần,0.03937048468874263
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2024,Feature_Ratio,Nợ dài hạn,1.001360946506968
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2024,Feature_Ratio,     Vay dài hạn,0.4158928529930447
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2024,Feature_Ratio,     Quỹ khác,0.06947834333264742
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2024,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.9882763910284345
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2024,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.9900119171235698
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2024,Feature_Ratio,     Thặng dư vốn cổ phần,0.03655411775953977
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2024,Feature_Ratio,Nợ dài hạn,0.8797944586758302
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2024,Feature_Ratio,     Vay dài hạn,0.35183680408065515
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2024,Feature_Ratio,     Quỹ khác,0.06450821126531676
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2024,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,7.0087792966759
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2024,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,1.2089012770658352
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2024,Feature_Ratio,     Thặng dư vốn cổ phần,0.03589301863638903
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2024,Feature_Ratio,Nợ dài hạn,0.9008890246639965
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2024,Feature_Ratio,     Vay dài hạn,0.34530410417752533
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2024,Feature_Ratio,     Quỹ khác,0.06334154866976298
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2024,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.9997723777854235
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2024,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,1.5566220182292079
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2024,Feature_Ratio,     Thặng dư vốn cổ phần,0.033662758258881854
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2024,Feature_Ratio,Nợ dài hạn,0.9725555277139477
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2024,Feature_Ratio,     Vay dài hạn,0.3393249003009107
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2024,Feature_Ratio,     Quỹ khác,0.059405737428049964
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2025,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.849041164887948
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2025,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.7501274321208178
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2025,Feature_Ratio,     Thặng dư vốn cổ phần,0.03325287176158547
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2025,Feature_Ratio,Nợ dài hạn,1.460798346921469
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2025,Feature_Ratio,     Vay dài hạn,0.6606539800476535
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q1/2025,Feature_Ratio,     Quỹ khác,0.06125674138725164
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2025,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.872536031149977
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2025,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,0.8829195176870274
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2025,Feature_Ratio,     Thặng dư vốn cổ phần,0.030388777910160494
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2025,Feature_Ratio,Nợ dài hạn,2.2679117703225247
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2025,Feature_Ratio,     Vay dài hạn,1.6746746423223955
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q2/2025,Feature_Ratio,     Quỹ khác,0.0533210440685184
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2025,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.774481112383751
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2025,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,1.0017141030952845
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2025,Feature_Ratio,     Thặng dư vốn cổ phần,0.029484783150555877
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2025,Feature_Ratio,Nợ dài hạn,2.148093035576502
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2025,Feature_Ratio,     Vay dài hạn,1.590352675551366
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q3/2025,Feature_Ratio,     Quỹ khác,0.05234893862722011
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2025,Target_Performance,Mảng Nguồn Vốn -> Hiệu quả ROE,6.8298249539103795
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2025,Feature_Ratio,     Thuế và các khoản phải trả Nhà nước,1.225421380473279
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2025,Feature_Ratio,     Thặng dư vốn cổ phần,0.02778981776467073
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2025,Feature_Ratio,Nợ dài hạn,1.5570294123814925
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2025,Feature_Ratio,     Vay dài hạn,1.0642236380183694
+Mảng Nguồn Vốn -> Hiệu quả ROE,Q4/2025,Feature_Ratio,     Quỹ khác,0.04933960196335894
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2010,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),12.583685368205993
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2010,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-3.110919533870559
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2010,Feature_Ratio,Giá vốn hàng bán,-65.75494160269082
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2010,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,2.721722399650186
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2010,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.6603250378486388
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2010,Feature_Ratio,Chi phí bán hàng,-2.1112511389289423
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2010,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),11.124603905227428
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2010,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-2.8532976165669153
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2010,Feature_Ratio,Giá vốn hàng bán,-70.25701363995141
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2010,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,2.860862892606565
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2010,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.8952794226074704
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2010,Feature_Ratio,Chi phí bán hàng,-2.059438253593586
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2010,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),8.949580731012007
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2010,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-2.4692790506927578
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2010,Feature_Ratio,Giá vốn hàng bán,-78.57516984167289
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2010,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,1.9244088486942201
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2010,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.6058244630744012
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2010,Feature_Ratio,Chi phí bán hàng,-2.366020736786671
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2010,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),12.717133102800418
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2010,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-3.6057728890837986
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2010,Feature_Ratio,Giá vốn hàng bán,-71.20818075051278
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2010,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,2.4304755836083842
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2010,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.549721307194071
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2010,Feature_Ratio,Chi phí bán hàng,-2.386090958246586
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2011,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),11.368952280280835
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2011,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-2.9736574057955725
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2011,Feature_Ratio,Giá vốn hàng bán,-73.13638729270112
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2011,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,2.400259142871702
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2011,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.8625968503447132
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2011,Feature_Ratio,Chi phí bán hàng,-1.1792143795329102
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2011,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),13.836814875602673
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2011,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-3.601505137068056
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2011,Feature_Ratio,Giá vốn hàng bán,-65.17109738376091
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2011,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,3.368127836129435
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2011,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.0653377617818345
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2011,Feature_Ratio,Chi phí bán hàng,-1.5426823458571435
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2011,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),12.269563294620966
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2011,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-3.383645774489981
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2011,Feature_Ratio,Giá vốn hàng bán,-68.23416138114297
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2011,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,3.937094828418994
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2011,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.9762559089047751
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2011,Feature_Ratio,Chi phí bán hàng,-1.7207929920054759
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2011,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),11.944655380351227
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2011,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-4.205035567547179
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2011,Feature_Ratio,Giá vốn hàng bán,-71.34477491922614
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2011,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,2.710875169598518
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2011,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.34816503399608456
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2011,Feature_Ratio,Chi phí bán hàng,-1.520016343129025
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2012,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),12.496864873605745
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2012,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-3.361417190911409
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2012,Feature_Ratio,Giá vốn hàng bán,-69.48557417890106
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2012,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,3.026702524255869
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2012,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.9732588428226632
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2012,Feature_Ratio,Chi phí bán hàng,-1.4750940086759177
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2012,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),12.863888633016366
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2012,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-3.806750473313706
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2012,Feature_Ratio,Giá vốn hàng bán,-71.64742530595456
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2012,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,3.5075352344199424
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2012,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.8190125470563032
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2012,Feature_Ratio,Chi phí bán hàng,-1.7808168016826287
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2012,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),11.49884680898121
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2012,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-3.47769065383247
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2012,Feature_Ratio,Giá vốn hàng bán,-73.56341517615893
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2012,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,2.850175974761187
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2012,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.8186120938242389
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2012,Feature_Ratio,Chi phí bán hàng,-1.99747999762767
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2012,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),15.050128353674719
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2012,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-4.989860540122719
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2012,Feature_Ratio,Giá vốn hàng bán,-67.50601452629417
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2012,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,3.5615003329902897
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2012,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.9643331133832013
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2012,Feature_Ratio,Chi phí bán hàng,-2.465016588592853
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2013,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),13.83433037883247
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2013,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-3.5957172345525956
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2013,Feature_Ratio,Giá vốn hàng bán,-68.97674276831725
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2013,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,3.3319479832340897
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2013,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.9808760650010317
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2013,Feature_Ratio,Chi phí bán hàng,-2.3666024506229335
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2013,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),14.59150340063054
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2013,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-3.2328911072706523
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2013,Feature_Ratio,Giá vốn hàng bán,-66.45570682350564
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2013,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,3.708095388045437
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2013,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.0411609698573254
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2013,Feature_Ratio,Chi phí bán hàng,-2.47402799542446
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2013,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),11.196696193442826
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2013,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-3.214549489637141
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2013,Feature_Ratio,Giá vốn hàng bán,-76.03704860073258
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2013,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,2.3592867224749883
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2013,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.7534452351416885
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2013,Feature_Ratio,Chi phí bán hàng,-2.4555636134979055
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2013,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),14.480328123692408
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2013,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-4.375821491519281
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2013,Feature_Ratio,Giá vốn hàng bán,-69.3589351881465
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2013,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,3.408580449671471
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2013,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.0144330160973976
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2013,Feature_Ratio,Chi phí bán hàng,-3.4353161208486807
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2014,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),12.32076372105371
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2014,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-3.5087283821399087
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2014,Feature_Ratio,Giá vốn hàng bán,-73.24172666681501
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2014,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,2.7806580510040924
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2014,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.8133416880846276
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2014,Feature_Ratio,Chi phí bán hàng,-2.6497094310777665
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2014,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),14.478244498204218
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2014,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-4.0746649502712105
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2014,Feature_Ratio,Giá vốn hàng bán,-70.73244747127411
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2014,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,3.3121042030936167
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2014,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.7469483174135045
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2014,Feature_Ratio,Chi phí bán hàng,-3.000885633145886
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2014,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),11.86905433953526
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2014,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-4.0184430882973015
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2014,Feature_Ratio,Giá vốn hàng bán,-76.78625914215857
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2014,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,2.516931896503024
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2014,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.6635704773330049
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2014,Feature_Ratio,Chi phí bán hàng,-2.685583130340398
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2014,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),11.476348176619775
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2014,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-3.389978146234397
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2014,Feature_Ratio,Giá vốn hàng bán,-77.45161698161819
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2014,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,2.572374037015112
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2014,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.5744359733375196
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2014,Feature_Ratio,Chi phí bán hàng,-3.096220020617586
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2015,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),19.293265454832667
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2015,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-4.677860678376634
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2015,Feature_Ratio,Giá vốn hàng bán,-64.18428358138772
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2015,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,3.920811017819023
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2015,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.9396698450286428
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2015,Feature_Ratio,Chi phí bán hàng,-4.826208478495653
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2015,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),19.009200053996427
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2015,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-4.633141146300436
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2015,Feature_Ratio,Giá vốn hàng bán,-65.64385983256263
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2015,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,3.982549389822813
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2015,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.093832690870183
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2015,Feature_Ratio,Chi phí bán hàng,-4.5655264693356115
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2015,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),19.679313498252984
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2015,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-5.515834824059434
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2015,Feature_Ratio,Giá vốn hàng bán,-66.88671400051493
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2015,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,3.4183195214486104
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2015,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.9421063102832191
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2015,Feature_Ratio,Chi phí bán hàng,-5.176962872883555
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2015,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),20.60538568865251
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2015,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-6.269179579694652
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2015,Feature_Ratio,Giá vốn hàng bán,-63.76352207730611
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2015,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,5.094381660433175
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2015,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.2513103339868101
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2015,Feature_Ratio,Chi phí bán hàng,-3.8511029262683834
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2016,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),19.37528124363919
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2016,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-5.753365415880494
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2016,Feature_Ratio,Giá vốn hàng bán,-67.465844633814
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2016,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,3.439676813413856
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2016,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.8520851883624309
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2016,Feature_Ratio,Chi phí bán hàng,-5.9458336057428705
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2016,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),20.986472651349104
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2016,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-5.687817948275477
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2016,Feature_Ratio,Giá vốn hàng bán,-63.46797892894897
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2016,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,4.661891122129618
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2016,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.6735025774887431
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2016,Feature_Ratio,Chi phí bán hàng,-5.192741274555555
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2016,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),22.246983981796216
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2016,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-6.0832915432239965
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2016,Feature_Ratio,Giá vốn hàng bán,-63.26848023813966
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2016,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,3.9260987787874013
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2016,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.7368272939339452
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2016,Feature_Ratio,Chi phí bán hàng,-5.861985445989643
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2016,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),22.09314166009144
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2016,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-6.279123140955218
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2016,Feature_Ratio,Giá vốn hàng bán,-64.85367422345358
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2016,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,4.460596194364417
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2016,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.1953371349071533
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2016,Feature_Ratio,Chi phí bán hàng,-5.672650006141931
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2017,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),21.60428501628248
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2017,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-6.187308470477213
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2017,Feature_Ratio,Giá vốn hàng bán,-65.64594897329545
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2017,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,3.6914964898604907
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2017,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.9570512347741101
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2017,Feature_Ratio,Chi phí bán hàng,-6.521053441176407
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2017,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),24.100989381254042
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2017,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-7.6749345634518376
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2017,Feature_Ratio,Giá vốn hàng bán,-63.06600886107362
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2017,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,4.2940047340127245
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2017,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-0.8235896895077273
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2017,Feature_Ratio,Chi phí bán hàng,-6.060002340980128
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2017,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),22.014247326102044
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2017,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-6.25164899315579
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2017,Feature_Ratio,Giá vốn hàng bán,-63.82490983640684
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2017,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,4.41894118236847
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2017,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.1001120270665865
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2017,Feature_Ratio,Chi phí bán hàng,-5.735996916583224
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2017,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),22.51252460288908
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2017,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-6.328634292440716
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2017,Feature_Ratio,Giá vốn hàng bán,-55.28613391943915
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2017,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,8.137287974077978
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2017,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.9932974983359952
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2017,Feature_Ratio,Chi phí bán hàng,-4.979120356749193
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2018,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),39.00722821909649
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2018,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-9.990595629265611
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2018,Feature_Ratio,Giá vốn hàng bán,-37.54395252867243
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2018,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,6.600695058667454
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2018,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.3753806018933743
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2018,Feature_Ratio,Chi phí bán hàng,-5.481507792441982
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2018,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),36.51295943015877
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2018,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-9.602898760522393
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2018,Feature_Ratio,Giá vốn hàng bán,-40.19992725501326
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2018,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,6.877641345598273
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2018,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.7020534633779953
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2018,Feature_Ratio,Chi phí bán hàng,-5.230533392327921
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2018,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),37.9592080102377
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2018,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-9.153075088958525
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2018,Feature_Ratio,Giá vốn hàng bán,-38.00090572789092
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2018,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,7.36488637720301
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2018,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.6275552463087233
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2018,Feature_Ratio,Chi phí bán hàng,-5.156359326478572
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2018,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),36.86280288998368
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2018,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-10.283098341494831
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2018,Feature_Ratio,Giá vốn hàng bán,-42.595106263926716
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2018,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,7.646099700453851
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2018,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.8091673803818549
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2018,Feature_Ratio,Chi phí bán hàng,-6.470066463671332
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2019,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),40.18475882998667
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2019,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-10.913003965497925
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2019,Feature_Ratio,Giá vốn hàng bán,-37.69569393563406
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2019,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,6.97016048170432
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2019,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.8712908008076494
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2019,Feature_Ratio,Chi phí bán hàng,-5.437489888901474
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2019,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),37.724043266340566
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2019,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-8.806235939001079
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2019,Feature_Ratio,Giá vốn hàng bán,-40.167296155203346
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2019,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,7.486393637485012
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2019,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.8459997440270355
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2019,Feature_Ratio,Chi phí bán hàng,-5.356430331271922
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2019,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),38.980268101485876
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2019,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-8.699530555245484
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2019,Feature_Ratio,Giá vốn hàng bán,-36.46287897982036
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2019,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,8.100681770698772
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2019,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.7515053666107074
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2019,Feature_Ratio,Chi phí bán hàng,-4.7166240683745215
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2019,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),37.695807536000345
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2019,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-11.758988938096051
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2019,Feature_Ratio,Giá vốn hàng bán,-45.352522446925114
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2019,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,6.801619662756059
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2019,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.7159040095204154
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2019,Feature_Ratio,Chi phí bán hàng,-6.531573896124779
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2020,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),39.49394586214346
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2020,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-9.230107831782258
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2020,Feature_Ratio,Giá vốn hàng bán,-38.75892123148997
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2020,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,7.228068138575503
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2020,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.9781123479262124
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2020,Feature_Ratio,Chi phí bán hàng,-6.00048941607522
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2020,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),38.89741580028703
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2020,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-9.174747481954306
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2020,Feature_Ratio,Giá vốn hàng bán,-41.73981868613214
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2020,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,8.613218204084916
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2020,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.8270649179101313
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2020,Feature_Ratio,Chi phí bán hàng,-6.696544940673649
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2020,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),39.56855048828312
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2020,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-9.94924790885619
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2020,Feature_Ratio,Giá vốn hàng bán,-38.433173460188115
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2020,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,7.838682472581024
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2020,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-2.0168016544027947
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2020,Feature_Ratio,Chi phí bán hàng,-5.294928393755457
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2020,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),39.892299304693154
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2020,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-10.822093213027907
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2020,Feature_Ratio,Giá vốn hàng bán,-41.4938937229644
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2020,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,7.849058844029126
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2020,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-2.4520031139419296
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2020,Feature_Ratio,Chi phí bán hàng,-6.856702254992543
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2021,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),38.05746468274583
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2021,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-8.181395791853726
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2021,Feature_Ratio,Giá vốn hàng bán,-39.91155310067025
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2021,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,7.70824762846187
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2021,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.9099690513669862
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2021,Feature_Ratio,Chi phí bán hàng,-7.248651849097731
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2021,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),39.88382552601683
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2021,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-8.90367377050955
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2021,Feature_Ratio,Giá vốn hàng bán,-41.5302350313634
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2021,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,7.984488492629768
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2021,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-2.2075618640590937
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2021,Feature_Ratio,Chi phí bán hàng,-6.626272862290438
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2021,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),37.42270250947122
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2021,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-7.944799666563067
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2021,Feature_Ratio,Giá vốn hàng bán,-40.60419353638151
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2021,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,8.343284715545995
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2021,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.7668136966470418
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2021,Feature_Ratio,Chi phí bán hàng,-5.963699070427388
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2021,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),38.21236707751812
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2021,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-9.234369993873374
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2021,Feature_Ratio,Giá vốn hàng bán,-43.384404177003724
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2021,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,8.542879128822753
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2021,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.4281638986505942
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2021,Feature_Ratio,Chi phí bán hàng,-8.046789571783012
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2022,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),40.62257878778049
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2022,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-10.23891552327498
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2022,Feature_Ratio,Giá vốn hàng bán,-38.64536611186848
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2022,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,8.287607396733836
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2022,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.7670666900631176
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2022,Feature_Ratio,Chi phí bán hàng,-6.737045639963435
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2022,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),38.05882550100723
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2022,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-8.60225882739008
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2022,Feature_Ratio,Giá vốn hàng bán,-43.09793049325666
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2022,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,8.62059322240314
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2022,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.9581413002520192
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2022,Feature_Ratio,Chi phí bán hàng,-6.987218645812182
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2022,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),39.1028064698118
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2022,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-8.686958229995437
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2022,Feature_Ratio,Giá vốn hàng bán,-40.35557440622511
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2022,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,8.641172764978533
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2022,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.8216158662477544
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2022,Feature_Ratio,Chi phí bán hàng,-6.725276107051012
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2022,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),40.152363143551284
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2022,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-9.71283526742778
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2022,Feature_Ratio,Giá vốn hàng bán,-43.007482191185645
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2022,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,7.45132986250822
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2022,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.85216228686323
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2022,Feature_Ratio,Chi phí bán hàng,-8.166581615451069
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2023,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),39.098439518403076
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2023,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-9.077082060820004
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2023,Feature_Ratio,Giá vốn hàng bán,-40.5463910242599
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2023,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,8.51318948806362
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2023,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.7574576253494185
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2023,Feature_Ratio,Chi phí bán hàng,-6.2805812637654705
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2023,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),37.116574073087975
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2023,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-8.317351339021817
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2023,Feature_Ratio,Giá vốn hàng bán,-44.25150721990196
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2023,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,8.507088600486442
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2023,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.9046868854505614
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2023,Feature_Ratio,Chi phí bán hàng,-6.9799642206815715
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2023,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),39.93922475559124
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2023,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-8.871318713571771
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2023,Feature_Ratio,Giá vốn hàng bán,-41.34457337733622
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2023,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,8.700425131941973
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2023,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.7237136409455023
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2023,Feature_Ratio,Chi phí bán hàng,-7.173941849780972
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2023,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),38.322929249780444
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2023,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-9.878657422929079
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2023,Feature_Ratio,Giá vốn hàng bán,-45.196372696209615
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2023,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,8.623611528296362
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2023,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-2.120385387388301
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2023,Feature_Ratio,Chi phí bán hàng,-6.566778968801519
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2024,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),39.099903483721846
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2024,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-8.97912113424798
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2024,Feature_Ratio,Giá vốn hàng bán,-42.26167551862318
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2024,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,8.853845252283444
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2024,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.9192296863341
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2024,Feature_Ratio,Chi phí bán hàng,-6.740962870277148
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2024,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),37.068065390658795
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2024,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-7.981746045295908
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2024,Feature_Ratio,Giá vốn hàng bán,-44.71168348832593
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2024,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,8.739071227195783
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2024,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-2.6156674048307704
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2024,Feature_Ratio,Chi phí bán hàng,-7.401773599882114
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2024,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),38.559995957586594
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2024,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-7.867876349715641
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2024,Feature_Ratio,Giá vốn hàng bán,-42.4033849164162
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2024,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,9.090273196434492
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2024,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.920124040793568
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2024,Feature_Ratio,Chi phí bán hàng,-6.805623353814741
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2024,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),36.13135845122768
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2024,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-7.2274821811595285
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2024,Feature_Ratio,Giá vốn hàng bán,-46.918336860541366
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2024,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,8.751459244595788
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2024,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-2.217181342360046
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2024,Feature_Ratio,Chi phí bán hàng,-6.663418394930447
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2025,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),39.22412446698422
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2025,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-7.9830301090691504
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2025,Feature_Ratio,Giá vốn hàng bán,-41.486755738763925
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2025,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,9.245323762849381
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2025,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.6042605828638188
+Cấu trúc KQKD -> Biên LN Gộp (%),Q1/2025,Feature_Ratio,Chi phí bán hàng,-7.776161167876373
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2025,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),36.14430714720985
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2025,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-8.087335627663872
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2025,Feature_Ratio,Giá vốn hàng bán,-44.81187183157935
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2025,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,9.54019651410376
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2025,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.9607351621864084
+Cấu trúc KQKD -> Biên LN Gộp (%),Q2/2025,Feature_Ratio,Chi phí bán hàng,-7.5659170453435465
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2025,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),37.8442645140138
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2025,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-6.787193505783056
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2025,Feature_Ratio,Giá vốn hàng bán,-44.027579005549754
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2025,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,10.032157708524924
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2025,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-2.4291088855603333
+Cấu trúc KQKD -> Biên LN Gộp (%),Q3/2025,Feature_Ratio,Chi phí bán hàng,-7.896802216462344
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2025,Target_Performance,Cấu trúc KQKD -> Biên LN Gộp (%),34.82006486988153
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2025,Feature_Ratio,Chi phí quản lý doanh  nghiệp,-6.866996823855597
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2025,Feature_Ratio,Giá vốn hàng bán,-47.79511283475173
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2025,Feature_Ratio,Lợi nhuận của Cổ đông của Công ty mẹ,9.081642479484593
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2025,Feature_Ratio,     Thuế thu nhập doanh nghiệp – hiện thời,-1.770662302176105
+Cấu trúc KQKD -> Biên LN Gộp (%),Q4/2025,Feature_Ratio,Chi phí bán hàng,-7.421393814175789

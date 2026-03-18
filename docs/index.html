@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fiinpro Analysis Dashboard</title>
+  <meta name="description" content="Dashboard phân tích dữ liệu Giá và Tài chính doanh nghiệp từ hệ thống FiinPro — Price Dynamics, Financial Health, Causal Analysis, Structure Impact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" defer></script>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface2: #21262d;
+      --border: #30363d;
+      --accent: #58a6ff;
+      --accent2: #f78166;
+      --accent3: #3fb950;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --tab-active: #58a6ff;
+      --radius: 10px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.4);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 40px 20px;
+    }
+    header h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--accent), #79c0ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+    }
+    header p { color: var(--text-muted); font-size: 0.875rem; margin-top: 4px; }
+
+    /* ── Tab nav ── */
+    .tab-nav {
+      display: flex;
+      gap: 4px;
+      padding: 16px 40px 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+    }
+    .tab-btn {
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 10px 18px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color .2s, border-color .2s;
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active { color: var(--tab-active); border-bottom-color: var(--tab-active); }
+
+    /* ── Content ── */
+    main { padding: 32px 40px; max-width: 1400px; margin: 0 auto; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; animation: fadeIn .25s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+    /* ── Cards / Metric tiles ── */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    @media(max-width: 900px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+    .card h3 { font-size: 0.95rem; font-weight: 600; color: var(--text-muted); margin-bottom: 14px; }
+
+    .metric-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+    .metric {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 24px;
+      flex: 1; min-width: 160px;
+    }
+    .metric .label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .5px; }
+    .metric .value { font-size: 1.5rem; font-weight: 700; color: var(--accent); margin-top: 4px; }
+
+    /* ── Table ── */
+    .tbl-wrap { overflow-x: auto; border-radius: 8px; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    th { background: var(--surface2); color: var(--text-muted); font-weight: 600; text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+    td { padding: 8px 12px; border-bottom: 1px solid var(--border); color: var(--text); }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: var(--surface2); }
+
+    /* ── Section heading ── */
+    .section-title { font-size: 1.2rem; font-weight: 700; margin: 28px 0 16px; color: var(--text); }
+    .section-desc  { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 16px; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
+
+    /* ── Alert boxes ── */
+    .alert { border-radius: 8px; padding: 14px 18px; font-size: 0.875rem; margin: 16px 0; }
+    .alert.success { background: rgba(63,185,80,.12); border: 1px solid rgba(63,185,80,.4); color: var(--accent3); }
+    .alert.warn    { background: rgba(247,129,102,.12); border: 1px solid rgba(247,129,102,.4); color: var(--accent2); }
+    .alert.info    { background: rgba(88,166,255,.12); border: 1px solid rgba(88,166,255,.4); color: var(--accent); }
+
+    /* ── Markdown report ── */
+    #report-md { font-size: 0.85rem; line-height: 1.7; }
+    #report-md h2,#report-md h3 { color: var(--accent); margin: 16px 0 8px; }
+    #report-md table { margin: 12px 0; }
+    #report-md p, #report-md li { color: var(--text); }
+    details summary { cursor: pointer; color: var(--accent); font-size: 0.875rem; margin-bottom: 10px; user-select: none; }
+
+    /* ── Chart container ── */
+    .chart { min-height: 400px; }
+    .plotly-empty { display: flex; align-items: center; justify-content: center; height: 200px; color: var(--text-muted); font-size: 0.875rem; }
+
+    /* ── Upload CTA ── */
+    .upload-cta {
+      background: linear-gradient(135deg, var(--surface), var(--surface2));
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+      color: var(--text-muted);
+    }
+    .upload-cta h2 { color: var(--text); margin-bottom: 12px; }
+    .upload-cta code { background: var(--surface2); border: 1px solid var(--border); border-radius: 4px; padding: 2px 6px; font-size: 0.85rem; color: var(--accent); }
+    .loading { color: var(--text-muted); text-align: center; padding: 60px; font-size: 0.875rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📊 Fiinpro Analysis Dashboard</h1>
+  <p>Dashboard trực quan hóa dữ liệu Giá và Tài chính công ty từ hệ thống Fiinpro.</p>
+</header>
+
+<div class="tab-nav">
+  <button class="tab-btn active" data-tab="overview">📂 Tổng quan</button>
+  <button class="tab-btn" data-tab="price">📈 Giá &amp; Động lượng</button>
+  <button class="tab-btn" data-tab="finance">💰 Sức khỏe Tài chính</button>
+  <button class="tab-btn" data-tab="cross">🔗 Tương quan Chéo</button>
+  <button class="tab-btn" data-tab="structure">🧱 Cơ cấu Tác động</button>
+</div>
+
+<main>
+  <!-- ── Tab 1: Tổng quan ── -->
+  <section id="tab-overview" class="tab-panel active">
+    <div class="metric-row" id="metrics-row">
+      <div class="loading">Đang tải dữ liệu…</div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Kết quả Kiểm định Dữ liệu</h3>
+        <div class="tbl-wrap" id="tbl-validation"><div class="loading">…</div></div>
+      </div>
+      <div class="card">
+        <h3>Chỉ số Mô hình (Dual-Auditor)</h3>
+        <div class="tbl-wrap" id="tbl-metrics"><div class="loading">…</div></div>
+      </div>
+    </div>
+
+    <hr class="divider" />
+    <details>
+      <summary>📄 Xem Báo cáo tự động (Auto-generated Insights)</summary>
+      <div class="card" style="margin-top:12px">
+        <div id="report-md">Đang tải…</div>
+      </div>
+    </details>
+
+    <hr class="divider" />
+    <div class="section-title">1.2 Sơ đồ Cơ cấu Tài sản &amp; Nguồn vốn (Common-size Stacked Bar)</div>
+    <div class="section-desc">Phương pháp: Common-size Analysis — Tỷ trọ ng = (Khoản mục / Tổng) × 100%</div>
+    <div class="card" style="margin-bottom:16px"><div class="chart" id="chart-stack-ts"></div></div>
+    <div class="card" style="margin-bottom:16px"><div class="chart" id="chart-stack-nv"></div></div>
+    <div class="card" style="margin-bottom:16px"><div class="chart" id="chart-stack-kqkd"></div></div>
+
+    <hr class="divider" />
+    <div class="section-title">📊 Bảng Đối chiếu &amp; Biểu đồ Tròn Mô hình</div>
+    <div class="section-desc">Biểu đồ tròn = Tỷ trọ ng trung bình lịch sử (mean toàn bộ quý) — tổng có thể ≠ 100%</div>
+    <div class="grid-2" style="margin-bottom:16px">
+      <div class="card">
+        <h3>Thành phần Tài sản — So sánh Quý Đầu vs Cuối</h3>
+        <div id="tbl-compare-ts"></div>
+      </div>
+      <div class="card"><div class="chart" id="pie-ts"></div></div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Thành phần Nguồn vốn — So sánh Quý Đầu vs Cuối</h3>
+        <div id="tbl-compare-nv"></div>
+      </div>
+      <div class="card"><div class="chart" id="pie-nv"></div></div>
+    </div>
+
+    <hr class="divider" />
+    <div class="section-title">1.3 Kết luận Tự động Loại hình Kinh doanh</div>
+    <div class="section-desc">Phương pháp: Rule-based Classification dựa trên chỉ số quý gần nhất</div>
+    <div id="biz-classifier"><div class="loading">…</div></div>
+
+    <hr class="divider" />
+    <div class="section-title">1.4 Sức khỏe Thanh khoản</div>
+    <div class="section-desc">Current Ratio = TSNH/NNH — Quick Ratio = (TSNH−HTK)/NNH — Ngưỡng an toàn: ≥ 1.0</div>
+    <div class="metric-row" id="liquidity-metrics"><div class="loading">…</div></div>
+    <div id="liquidity-alert"></div>
+  </section>
+
+  <!-- ── Tab 2: Giá & Động lượng ── -->
+  <section id="tab-price" class="tab-panel">
+    <div class="section-title">Diễn biến Giá Cổ Phiếu</div>
+    <div class="card"><div class="chart" id="chart-price"></div></div>
+
+    <div class="section-title" style="margin-top:24px">Độ biến động giá 30 Ngày (Annualized Volatility)</div>
+    <div class="card"><div class="chart" id="chart-vol"></div></div>
+
+    <hr class="divider" />
+    <div class="section-title">Kiểm định Giả thuyết Mùa vụ Giá (Tháng 4–5)</div>
+    <div class="section-desc"><em>Giả thuyết: Giá thường biến động tăng cao vào tháng 4–5 hàng năm.</em></div>
+    <div class="card"><div class="chart" id="chart-price-season"></div></div>
+    <div id="alert-price-season"></div>
+  </section>
+
+  <!-- ── Tab 3: Sức khỏe Tài chính ── -->
+  <section id="tab-finance" class="tab-panel">
+    <div class="section-title">Diễn biến Doanh thu</div>
+    <div class="grid-2">
+      <div class="card"><div class="chart" id="chart-revenue-bar"></div></div>
+      <div class="card"><div class="chart" id="chart-revenue-growth"></div></div>
+    </div>
+
+    <hr class="divider" />
+    <div class="section-title">Kiểm định Giả thuyết Mùa vụ Doanh thu (Đỉnh Q4, Đáy Q1)</div>
+    <div class="section-desc"><em>Giả thuyết: Doanh thu thường đạt đỉnh vào Q4 và tạo đáy vào Q1.</em></div>
+    <div class="card"><div class="chart" id="chart-rev-season"></div></div>
+    <div id="alert-rev-season"></div>
+
+    <hr class="divider" />
+    <div class="section-title">2.1 DuPont What-if Calculator — Kịch bản tăng 10% ROE</div>
+    <div class="section-desc">Phương pháp: Giữ nguyên 2 nhân tố, tính nhân tố còn lại cần thiết để ROE tăng 10%</div>
+    <div id="dupont-whatif"><div class="loading">…</div></div>
+
+    <hr class="divider" />
+    <div class="section-title">2.2 Phân tích Tỷ số Tài chính (Financial Ratios)</div>
+    <div class="section-desc">Các tỷ số tài chính quan trọng: Khả năng thanh toán, Hiệu quả hoạt động, Khả năng sinh lời, Đòn bẩy tài chính.</div>
+    <div class="tbl-wrap" id="tbl-ratios"><div class="loading">…</div></div>
+  </section>
+
+  <!-- ── Tab 4: Tương quan Chéo ── -->
+  <section id="tab-cross" class="tab-panel">
+    <div class="section-title">Tương quan Giá và Tài chính (Cross-Analysis)</div>
+    <div class="section-desc">So sánh biến động hành vi giao dịch (tổng hợp theo quý) so với Quý kế toán tương ứng.</div>
+    <div class="card"><div class="chart" id="chart-cross"></div></div>
+  </section>
+
+  <!-- ── Tab 5: Cơ cấu Tác động ── -->
+  <section id="tab-structure" class="tab-panel">
+    <div class="section-desc">Luồng 4: Tỷ trọng và Top 5 thành tố ảnh hưởng lớn nhất tới các biến mục tiêu.</div>
+    <div class="grid-3" id="charts-impact"></div>
+    <hr class="divider" />
+    <div class="section-title">Chuỗi thời gian: Biến mục tiêu &amp; yếu tố cấu thành</div>
+    <div id="charts-timeseries"></div>
+  </section>
+</main>
+
+<script>
+/* ────────────────────────────────────────────────────────
+   Helpers
+──────────────────────────────────────────────────────── */
+const BASE = './output/';
+
+function fetchCSV(name) {
+  return new Promise(resolve => {
+    Papa.parse(BASE + name, {
+      download: true, header: true, dynamicTyping: true, skipEmptyLines: true,
+      complete: r => resolve(r.data),
+      error: () => resolve([])
+    });
+  });
+}
+
+async function fetchText(name) {
+  try { const r = await fetch(BASE + name); return r.ok ? r.text() : ''; }
+  catch { return ''; }
+}
+
+/* Simple Markdown → HTML (tables, bold, headers, lists) */
+function mdToHtml(md) {
+  if (!md) return '';
+  let h = md
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .replace(/^# (.+)$/gm, '<h2>$1</h2>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/`(.+?)`/g, '<code style="background:var(--surface2);padding:1px 5px;border-radius:3px;color:var(--accent)">$1</code>')
+    .replace(/^- (.+)$/gm, '<li>$1</li>')
+    .replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>')
+    .replace(/\n{2,}/g, '<br/>');
+  // Tables
+  h = h.replace(/(\|.+\|\n?)+/g, block => {
+    const rows = block.trim().split('\n').filter(r => r.trim() && !r.match(/^\|[-| ]+\|$/));
+    const tableRows = rows.map((r, i) => {
+      const cells = r.split('|').filter((_, ci) => ci > 0 && ci < r.split('|').length - 1);
+      const tag = i === 0 ? 'th' : 'td';
+      return '<tr>' + cells.map(c => `<${tag}>${c.trim()}</${tag}>`).join('') + '</tr>';
+    });
+    return '<div class="tbl-wrap"><table>' + tableRows.join('') + '</table></div>';
+  });
+  return h;
+}
+
+function makeTable(rows, maxRows = 50) {
+  if (!rows.length) return '<div class="plotly-empty">Không có dữ liệu</div>';
+  const keys = Object.keys(rows[0]);
+  const head = '<tr>' + keys.map(k => `<th>${k}</th>`).join('') + '</tr>';
+  const body = rows.slice(0, maxRows).map(r =>
+    '<tr>' + keys.map(k => `<td>${r[k] ?? ''}</td>`).join('') + '</tr>'
+  ).join('');
+  return `<div class="tbl-wrap"><table><thead>${head}</thead><tbody>${body}</tbody></table></div>`;
+}
+
+const PLOTLY_LAYOUT = {
+  paper_bgcolor: 'rgba(0,0,0,0)',
+  plot_bgcolor: 'rgba(0,0,0,0)',
+  font: { family: 'Inter', color: '#e6edf3', size: 12 },
+  xaxis: { gridcolor: '#30363d', linecolor: '#30363d', zerolinecolor: '#30363d' },
+  yaxis: { gridcolor: '#30363d', linecolor: '#30363d', zerolinecolor: '#30363d' },
+  legend: { bgcolor: 'rgba(0,0,0,0)', bordercolor: '#30363d' },
+  margin: { t: 50, b: 50, l: 60, r: 20 }
+};
+
+function plot(id, data, extra = {}) {
+  const layout = Object.assign({}, PLOTLY_LAYOUT, extra);
+  Plotly.newPlot(id, data, layout, { responsive: true, displayModeBar: false });
+}
+
+/* ────────────────────────────────────────────────────────
+   Tab navigation
+──────────────────────────────────────────────────────── */
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    // lazy trigger resize so Plotly fills correctly
+    setTimeout(() => window.dispatchEvent(new Event('resize')), 50);
+  });
+});
+
+/* ────────────────────────────────────────────────────────
+   Main data load
+──────────────────────────────────────────────────────── */
+async function main() {
+  const [
+    priceData, revData, crossData, valData, metricsData,
+    impactData, tsData, priceSeasonData, revSeasonData,
+    reportMd, priceInsight, revInsight,
+    vertData, ratioData, dupData
+  ] = await Promise.all([
+    fetchCSV('price_analysis_features.csv'),
+    fetchCSV('revenue_growth.csv'),
+    fetchCSV('aggregated_price_by_quarter.csv'),
+    fetchCSV('data_validation.csv'),
+    fetchCSV('model_metrics.csv'),
+    fetchCSV('structure_impact.csv'),
+    fetchCSV('structure_timeseries.csv'),
+    fetchCSV('price_seasonality.csv'),
+    fetchCSV('revenue_seasonality.csv'),
+    fetchText('analysis_report.md'),
+    fetchText('price_seasonality_insight.txt'),
+    fetchText('revenue_seasonality_insight.txt'),
+    fetchCSV('vertical_analysis.csv'),
+    fetchCSV('financial_ratios.csv'),
+    fetchCSV('dupont_analysis.csv'),
+  ]);
+
+  /* Check if any data loaded */
+  if (!priceData.length && !revData.length) {
+    document.querySelector('main').innerHTML = `
+      <div class="upload-cta">
+        <h2>⚠️ Chưa có dữ liệu phân tích</h2>
+        <p style="margin:12px 0">Hãy chạy pipeline cục bộ để sinh output, rồi commit lên GitHub:</p>
+        <pre style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:16px;text-align:left;font-size:0.82rem;overflow:auto;margin:16px 0">
+cd src
+python main.py          # sinh output/*.csv
+cd ..
+git add output/
+git commit -m "chore: update analysis output"
+git push</pre>
+        <p>Sau khi push, GitHub Pages sẽ tự cập nhật dashboard này.</p>
+      </div>`;
+    return;
+  }
+
+  /* ── Tab 1: Tổng quan ── */
+  const metricsRow = document.getElementById('metrics-row');
+  if (metricsData.length) {
+    metricsRow.innerHTML = metricsData.map(r => `
+      <div class="metric">
+        <div class="label">${r['Chỉ tiêu'] ?? r['Target'] ?? Object.values(r)[0]}</div>
+        <div class="value">${r['R-squared'] !== undefined ? Number(r['R-squared']).toFixed(4) : (r['R2'] !== undefined ? Number(r['R2']).toFixed(4) : '–')}</div>
+        <div style="color:var(--text-muted);font-size:0.75rem;margin-top:2px">R²</div>
+      </div>`).join('');
+  } else { metricsRow.innerHTML = ''; }
+
+  document.getElementById('tbl-validation').innerHTML = valData.length ? makeTable(valData) : '<div class="plotly-empty">Không có dữ liệu</div>';
+  document.getElementById('tbl-metrics').innerHTML   = metricsData.length ? makeTable(metricsData) : '<div class="plotly-empty">Không có dữ liệu</div>';
+  document.getElementById('report-md').innerHTML = mdToHtml(reportMd) || '<div class="plotly-empty">Báo cáo chưa được tạo</div>';
+
+  /* ── Tab 2: Giá & Động lượng ── */
+  if (priceData.length) {
+    const dates = priceData.map(r => r['NGÀY']);
+    const prices = priceData.map(r => r['GIÁ']);
+    const outlierMask = priceData.map(r => r['OUTLIER_BLOCK_TRADE'] === 1);
+    const outlierDates = dates.filter((_, i) => outlierMask[i]);
+    const outlierPrices = prices.filter((_, i) => outlierMask[i]);
+
+    plot('chart-price', [
+      { x: dates, y: prices, mode: 'lines', name: 'Giá Khớp Lệnh',
+        line: { color: '#58a6ff', width: 1.5 } },
+      { x: outlierDates, y: outlierPrices, mode: 'markers', name: 'Giao Dịch Thỏa Thuận Bất Thường',
+        marker: { color: '#f78166', size: 8, symbol: 'x' } }
+    ], { title: 'Diễn biến Giá Cổ Phiếu & Nhấn mạnh Lệnh Thỏa Thuận',
+         xaxis: { ...PLOTLY_LAYOUT.xaxis, title: 'Thời gian' },
+         yaxis: { ...PLOTLY_LAYOUT.yaxis, title: 'Giá' } });
+
+    const volData = priceData.filter(r => r['VOLATILITY_30D'] != null && r['VOLATILITY_30D'] !== '');
+    if (volData.length) {
+      plot('chart-vol', [
+        { x: volData.map(r => r['NGÀY']), y: volData.map(r => r['VOLATILITY_30D']),
+          mode: 'lines', name: 'Volatility 30D', line: { color: '#e3b341', width: 1.5 } }
+      ], { title: 'Độ biến động giá 30 Ngày (Annualized)',
+           xaxis: { ...PLOTLY_LAYOUT.xaxis, title: 'Thời gian' },
+           yaxis: { ...PLOTLY_LAYOUT.yaxis, title: 'Volatility' } });
+    } else { document.getElementById('chart-vol').innerHTML = '<div class="plotly-empty">Chưa đủ dữ liệu Volatility</div>'; }
+  }
+
+  if (priceSeasonData.length) {
+    const months = priceSeasonData.map(r => r['MONTH']);
+    const colors = months.map(m => (m === 4 || m === 5) ? '#f78166' : '#58a6ff');
+    plot('chart-price-season', [
+      { x: months, y: priceSeasonData.map(r => r['Avg_Log_Return_Pct']),
+        type: 'bar', name: 'Log Return TB (%)',
+        marker: { color: colors },
+        text: priceSeasonData.map(r => Number(r['Avg_Log_Return_Pct']).toFixed(3) + '%'),
+        textposition: 'outside' }
+    ], { title: 'Trung bình Tăng trưởng Giá theo Tháng (%)',
+         xaxis: { ...PLOTLY_LAYOUT.xaxis, title: 'Tháng', dtick: 1 },
+         yaxis: { ...PLOTLY_LAYOUT.yaxis, title: 'Log Return TB (%)' } });
+
+    const alertEl = document.getElementById('alert-price-season');
+    if (priceInsight) {
+      const ok = priceInsight.includes('Chấp nhận');
+      alertEl.innerHTML = `<div class="alert ${ok ? 'success' : 'warn'}">🔍 ${priceInsight}</div>`;
+    }
+  }
+
+  /* ── Tab 3: Tài chính ── */
+  if (revData.length) {
+    plot('chart-revenue-bar', [
+      { x: revData.map(r => r['Quý']), y: revData.map(r => r['Doanh_Tu'] ?? r['Doanh_Thu']),
+        type: 'bar', name: 'Doanh Thu', marker: { color: '#58a6ff' } }
+    ], { title: 'Doanh Thu theo Quý',
+         xaxis: { ...PLOTLY_LAYOUT.xaxis, title: 'Quý' },
+         yaxis: { ...PLOTLY_LAYOUT.yaxis, title: 'Doanh Thu (tỷ VNĐ)' } });
+
+    const growthData = revData.filter(r => r['Tang_Truong_QoQ_Pct'] != null && r['Tang_Truong_QoQ_Pct'] !== '');
+    plot('chart-revenue-growth', [
+      { x: growthData.map(r => r['Quý']), y: growthData.map(r => r['Tang_Truong_QoQ_Pct']),
+        mode: 'lines+markers', name: 'QoQ %', line: { color: '#3fb950' },
+        marker: { size: 5 } },
+      { x: [growthData[0]?.['Quý'], growthData[growthData.length-1]?.['Quý']],
+        y: [0, 0], mode: 'lines', name: 'Zero', line: { color: '#f78166', dash: 'dash' }, showlegend: false }
+    ], { title: 'Tốc độ tăng trưởng doanh thu (QoQ %)',
+         xaxis: { ...PLOTLY_LAYOUT.xaxis, title: 'Quý' },
+         yaxis: { ...PLOTLY_LAYOUT.yaxis, title: 'QoQ %' } });
+  }
+
+  if (revSeasonData.length) {
+    const qLabels = revSeasonData.map(r => r['Quarter_Label']);
+    const qColors = qLabels.map(q => q === 'Q4' ? '#f78166' : q === 'Q1' ? '#58a6ff' : '#8b949e');
+    plot('chart-rev-season', [
+      { x: qLabels, y: revSeasonData.map(r => r['Avg_Revenue']),
+        type: 'bar', name: 'Doanh thu TB', marker: { color: qColors },
+        text: revSeasonData.map(r => Number(r['Avg_Revenue']).toLocaleString('vi-VN')),
+        textposition: 'outside' }
+    ], { title: 'Trung bình Doanh thu theo Quý',
+         xaxis: { ...PLOTLY_LAYOUT.xaxis, title: 'Quý' },
+         yaxis: { ...PLOTLY_LAYOUT.yaxis, title: 'Doanh thu trung bình' } });
+
+    const alertRevEl = document.getElementById('alert-rev-season');
+    if (revInsight) {
+      const ok = revInsight.includes('Chấp nhận');
+      alertRevEl.innerHTML = `<div class="alert ${ok ? 'success' : 'warn'}">🔍 ${revInsight}</div>`;
+    }
+  }
+
+  /* ── Tab 4: Cross Analysis ── */
+  if (crossData.length && revData.length) {
+    const revMap = {};
+    revData.forEach(r => { revMap[r['Quý']] = r; });
+    const merged = crossData.map(c => ({
+      ...c,
+      tang_truong: revMap[c['BCTC_Quarter_Label']]?.['Tang_Truong_QoQ_Pct'],
+      label: c['BCTC_Quarter_Label']
+    })).filter(c => c['tang_truong'] != null);
+
+    if (merged.length) {
+      plot('chart-cross', [{
+        x: merged.map(r => r['tang_truong']),
+        y: merged.map(r => r['TB_KhoiLuong_KhopLenh_Ngay']),
+        mode: 'markers+text',
+        text: merged.map(r => r['label']),
+        textposition: 'top center',
+        marker: {
+          size: merged.map(r => Math.max(5, Math.min(30, (r['TB_BienDong'] || 0) * 30))),
+          color: merged.map(r => r['TB_Gia_Ngay']),
+          colorscale: 'Blues', showscale: true,
+          colorbar: { title: 'Giá TB', thickness: 12 }
+        },
+        name: 'Quarters', type: 'scatter'
+      }], {
+        title: 'Tương quan: Tăng trưởng Doanh thu vs Lượng giao dịch trung bình quý',
+        xaxis: { ...PLOTLY_LAYOUT.xaxis, title: 'Tăng trưởng Doanh thu (%)', zeroline: true, zerolinecolor: '#e6edf3', zerolinewidth: 1 },
+        yaxis: { ...PLOTLY_LAYOUT.yaxis, title: 'Khối lượng GD Trung bình' }
+      });
+    } else {
+      document.getElementById('chart-cross').innerHTML = '<div class="plotly-empty">Không đủ dữ liệu giao thoa để vẽ tương quan chéo</div>';
+    }
+  }
+
+  /* ── Tab 5: Structure Impact ── */
+  if (impactData.length) {
+    const targets = [...new Set(impactData.map(r => r['Target']))];
+    const impactContainer = document.getElementById('charts-impact');
+    impactContainer.innerHTML = '';
+
+    targets.forEach(target => {
+      const subset = impactData.filter(r => r['Target'] === target).sort((a, b) => a['Importance_Score'] - b['Importance_Score']);
+      const div = document.createElement('div');
+      div.className = 'card';
+      div.innerHTML = `<h3>Đóng góp: ${target}</h3><div class="chart" id="impact-${target.replace(/\s+/g, '_')}"></div>`;
+      impactContainer.appendChild(div);
+      const chartId = `impact-${target.replace(/\s+/g, '_')}`;
+      requestAnimationFrame(() => {
+        plot(chartId, [{
+          x: subset.map(r => r['Importance_Score']),
+          y: subset.map(r => String(r['Feature']).trim()),
+          type: 'bar', orientation: 'h', name: 'Tỷ trọng (%)',
+          marker: { color: '#58a6ff' },
+          text: subset.map(r => Number(r['Importance_Score']).toFixed(1) + '%'),
+          textposition: 'outside'
+        }], { title: 'Top 5 Features', margin: { t: 40, b: 40, l: 220, r: 60 },
+              xaxis: { ...PLOTLY_LAYOUT.xaxis, title: 'Tỷ trọng (%)' },
+              yaxis: { ...PLOTLY_LAYOUT.yaxis, automargin: true } });
+      });
+    });
+  }
+
+  if (tsData.length) {
+    const tsContainer = document.getElementById('charts-timeseries');
+    tsContainer.innerHTML = '';
+    const targets = [...new Set(tsData.map(r => r['Target_Name']))];
+    targets.forEach(target => {
+      const targetData = tsData.filter(r => r['Target_Name'] === target);
+      const variables = [...new Set(targetData.map(r => r['Variable_Name']))];
+      const traces = variables.map(v => {
+        const vd = targetData.filter(r => r['Variable_Name'] === v);
+        const isTarget = v.trim() === target.trim();
+        return {
+          x: vd.map(r => r['Quarter']),
+          y: vd.map(r => r['Value']),
+          mode: 'lines',
+          name: String(v).trim(),
+          line: { width: isTarget ? 4 : 1.5, color: isTarget ? '#e3b341' : undefined, dash: isTarget ? 'solid' : 'dot' }
+        };
+      });
+
+      const wrap = document.createElement('div');
+      wrap.className = 'card';
+      wrap.style.marginBottom = '20px';
+      const chartId = `ts-${target.replace(/\s+/g, '_')}`;
+      wrap.innerHTML = `<h3>Chuỗi thời gian: ${target}</h3><div class="chart" id="${chartId}"></div>`;
+      tsContainer.appendChild(wrap);
+      requestAnimationFrame(() => {
+        plot(chartId, traces, {
+          title: `Cấu thành của ${target}`,
+          xaxis: { ...PLOTLY_LAYOUT.xaxis, title: 'Quý' },
+          yaxis: { ...PLOTLY_LAYOUT.yaxis, title: 'Giá trị' }
+        });
+      });
+    });
+  }
+  /* ── NEW: Vertical Analysis — Stacked Bars + Pie + Classifier + Liquidity ── */
+  const COLORS = ['#58a6ff','#3fb950','#e3b341','#f78166','#db61a2','#79c0ff','#56d364','#ff7b72'];
+  if (vertData.length) {
+    const qCols = Object.keys(vertData[0]).filter(k => !['Chỉ_tiêu','Báo_cáo','Mẫu_số'].includes(k));
+    const firstQ = qCols[0], lastQ = qCols[qCols.length - 1];
+
+    // Helper: get items for one section
+    function vertItems(mauSo) {
+      return vertData.filter(r => r['Mẫu_số'] === mauSo && r['Báo_cáo'] === 'BCĐKT');
+    }
+    function vertKQKD() {
+      return vertData.filter(r => r['Báo_cáo'] === 'KQKD');
+    }
+
+    // Stacked bars
+    const stackDefs = [
+      { items: vertItems('Tổng tài sản'),   id: 'chart-stack-ts',   title: 'Cơ cấu Tài sản (% Tổng tài sản)' },
+      { items: vertItems('Tổng nguồn vốn'), id: 'chart-stack-nv',   title: 'Cơ cấu Nguồn vốn (% Tổng nguồn vốn)' },
+      { items: vertKQKD(),                    id: 'chart-stack-kqkd', title: 'Cơ cấu KQKD (% Doanh thu thuần)' },
+    ];
+    stackDefs.forEach(({items, id, title}) => {
+      if (!items.length) { document.getElementById(id).innerHTML = '<div class="plotly-empty">Không có dữ liệu</div>'; return; }
+      const traces = items.map((r, ci) => ({
+        x: qCols, y: qCols.map(q => r[q] ?? null),
+        type: 'bar', name: r['Chỉ_tiêu'],
+        marker: { color: COLORS[ci % COLORS.length] }
+      }));
+      plot(id, traces, { title, barmode: 'relative',
+        xaxis: { ...PLOTLY_LAYOUT.xaxis, title: 'Quý', tickangle: -45 },
+        yaxis: { ...PLOTLY_LAYOUT.yaxis, title: 'Tỷ trọ ng (%)' },
+        legend: { orientation: 'h', y: -0.35 } });
+    });
+
+    // Pie charts + Compare tables
+    const pieDefs = [
+      { items: vertItems('Tổng tài sản'),   pieId: 'pie-ts', tblId: 'tbl-compare-ts', label: 'Tài sản' },
+      { items: vertItems('Tổng nguồn vốn'), pieId: 'pie-nv', tblId: 'tbl-compare-nv', label: 'Nguồn vốn' },
+    ];
+    pieDefs.forEach(({items, pieId, tblId, label}) => {
+      if (!items.length) return;
+      const names = items.map(r => r['Chỉ_tiêu']);
+      const avgVals = items.map(r => {
+        const nums = qCols.map(q => parseFloat(r[q]) || 0);
+        return nums.reduce((s, v) => s + v, 0) / nums.length;
+      });
+
+      // Pie
+      Plotly.newPlot(pieId, [{ type: 'pie', labels: names, values: avgVals.map(Math.abs),
+        textinfo: 'label+percent',
+        hovertemplate: '<b>%{label}</b><br>TB Lịch sử: %{value:.1f}%<extra></extra>',
+        marker: { colors: COLORS } }],
+        Object.assign({}, PLOTLY_LAYOUT, { title: `Cữ cấu ${label} — TB Lịch sử`, height: 340 }),
+        { responsive: true, displayModeBar: false }
+      );
+
+      // Compare table
+      const rows = items.map(r => ({
+        'Khoản mục': r['Chỉ_tiêu'],
+        [`${firstQ} (%)`]: (parseFloat(r[firstQ]) || 0).toFixed(2),
+        [`${lastQ} (%)`]: (parseFloat(r[lastQ]) || 0).toFixed(2),
+        'Biến động (+/-)': ((parseFloat(r[lastQ]) || 0) - (parseFloat(r[firstQ]) || 0)).toFixed(2),
+      }));
+      document.getElementById(tblId).innerHTML = makeTable(rows);
+    });
+
+    // Business Model Classifier
+    const lastRatio = ratioData.length ? ratioData[ratioData.length - 1] : {};
+    const tscdRow = vertItems('Tổng tài sản').find(r => r['Chỉ_tiêu'] === 'Tài sản cố định');
+    const tienRow = vertItems('Tổng tài sản').find(r => r['Chỉ_tiêu'] === 'Tiền và tương đương');
+    const tscdPct  = tscdRow  ? (parseFloat(tscdRow[lastQ])  || 0) : 0;
+    const tienPct  = tienRow  ? (parseFloat(tienRow[lastQ])  || 0) : 0;
+    const atRatio  = parseFloat(lastRatio['Asset_Turnover']) || 0;
+    const deRatio  = parseFloat(lastRatio['DE_Ratio'])       || 0;
+    const rules = [
+      [tscdPct > 40,  '⚙️', 'Mô hình Thâm dụng vốn',       `TSCĐ/Tổng TS = ${tscdPct.toFixed(1)}% > 40%`],
+      [atRatio > 1.5, '🔄', 'Bán lẻ / Quay vòng nhanh',    `Vòng quay TS = ${atRatio.toFixed(2)} > 1.5`],
+      [deRatio > 2.0, '⚠️', 'Sử dụng Đòn bẩy cao',         `Nợ/VCSH = ${deRatio.toFixed(2)} > 2.0`],
+      [tienPct > 20,  '💰', 'Mô hình Giàu tiền mặt',         `Tiền/Tổng TS = ${tienPct.toFixed(1)}% > 20%`],
+    ];
+    const matched = rules.filter(([cond]) => cond);
+    const bizEl = document.getElementById('biz-classifier');
+    if (matched.length) {
+      bizEl.innerHTML = matched.map(([,icon,label,detail]) =>
+        `<div class="alert success">${icon} <strong>${label}</strong> — ${detail}</div>`
+      ).join('');
+    } else {
+      bizEl.innerHTML = `<div class="alert info">📋 <strong>Mô hình Đầu tư hỗn hợp</strong> — Không thuộc phân loại đặc biệt nào. Nợ/VCSH=${deRatio.toFixed(2)}, TSCĐ=${tscdPct.toFixed(1)}%, Quay vòng TS=${atRatio.toFixed(2)}</div>`;
+    }
+
+    // Liquidity metrics
+    const curR = parseFloat(lastRatio['Current_Ratio']) || 0;
+    const qckR = parseFloat(lastRatio['Quick_Ratio'])   || 0;
+    const lastQtr = lastRatio['Quarter'] || '';
+    const liqEl  = document.getElementById('liquidity-metrics');
+    liqEl.innerHTML = [
+      { label: 'Quý', val: lastQtr, color: 'var(--text)' },
+      { label: 'Thanh toán hiện hành', val: curR.toFixed(2), color: curR >= 1 ? 'var(--accent3)' : 'var(--accent2)' },
+      { label: 'Thanh toán nhanh',       val: qckR.toFixed(2), color: qckR >= 1 ? 'var(--accent3)' : 'var(--accent2)' },
+    ].map(m => `<div class="metric"><div class="label">${m.label}</div><div class="value" style="color:${m.color}">${m.val}</div></div>`).join('');
+    const liqAlert = document.getElementById('liquidity-alert');
+    if (curR >= 1 && qckR >= 1) liqAlert.innerHTML = '<div class="alert success">✅ Sức khỏe thanh khoản ở mức <strong>Tốt</strong> — đảm bảo khả năng chi trả nghĩa vụ ngắn hạn.</div>';
+    else if (curR >= 1) liqAlert.innerHTML = '<div class="alert warn">⚠️ Thanh toán hiện hành ổn nhưng Quick Ratio thấp — hàng tồn kho chiếm tỷ trọ ng lớn.</div>';
+    else liqAlert.innerHTML = '<div class="alert warn">❌ Thanh khoản <strong>yếu</strong> — rủi ro không đủ tài sản ngắn hạn để thanh toán nợ đến hạn.</div>';
+  }
+
+  /* ── NEW: DuPont What-if Calculator ── */
+  const dupWhatifEl = document.getElementById('dupont-whatif');
+  const lastDup = dupData.filter(r => r['ROE_DuPont_Pct'] != null).slice(-1)[0];
+  if (lastDup) {
+    const roe  = parseFloat(lastDup['ROE_DuPont_Pct']) || 0;
+    const nm   = parseFloat(lastDup['Net_Margin_Pct'])  || 0;
+    const at   = parseFloat(lastDup['Asset_Turnover'])  || 0;
+    const em   = parseFloat(lastDup['Equity_Multiplier']) || 0;
+    const roeT = roe * 1.10;
+    const atNeed = (nm !== 0 && em !== 0) ? roeT / (nm / 100 * em * 100) : null;
+    const nmNeed = (at !== 0 && em !== 0) ? roeT / (at * em)             : null;
+    dupWhatifEl.innerHTML = `
+      <div class="alert info" style="margin-bottom:12px">📊 <strong>ROE hiện tại: ${roe.toFixed(2)}%</strong> → Mục tiêu (+10%): <strong>${roeT.toFixed(2)}%</strong></div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Kịch bản 1: Cải thiện Hiệu suất</h3>
+          <p style="color:var(--text-muted);font-size:.82rem;margin-bottom:12px">Tăng Vòng quay Tài sản, giữ nguyên Biên LN &amp; Đòn bẩy</p>
+          <div class="metric"><div class="label">Vòng quay TS cần đạt</div>
+            <div class="value" style="color:var(--accent3)">${atNeed !== null ? atNeed.toFixed(4) : 'N/A'}</div>
+            <div style="color:var(--text-muted);font-size:.75rem;margin-top:4px">Δ ${atNeed !== null ? (atNeed - at >= 0 ? '+' : '') + (atNeed - at).toFixed(4) : ''} so với hiện tại (${at.toFixed(4)})</div>
+          </div>
+          <p style="color:var(--text-muted);font-size:.8rem;margin-top:10px">💡 Đẩy mạnh thu hồi Phải thu &amp; tối ưu hóa Hàng tồn kho.</p>
+        </div>
+        <div class="card">
+          <h3>Kịch bản 2: Cải thiện Biên LN</h3>
+          <p style="color:var(--text-muted);font-size:.82rem;margin-bottom:12px">Tăng Net Margin, giữ nguyên Vòng quay &amp; Đòn bẩy</p>
+          <div class="metric"><div class="label">Biên LN ròng cần đạt</div>
+            <div class="value" style="color:var(--accent3)">${nmNeed !== null ? nmNeed.toFixed(2) + '%' : 'N/A'}</div>
+            <div style="color:var(--text-muted);font-size:.75rem;margin-top:4px">Δ ${nmNeed !== null ? (nmNeed - nm >= 0 ? '+' : '') + (nmNeed - nm).toFixed(2) + '%' : ''} so với hiện tại (${nm.toFixed(2)}%)</div>
+          </div>
+          <p style="color:var(--text-muted);font-size:.8rem;margin-top:10px">💡 Tiết giảm Chi phí quản lý doanh nghiệp.</p>
+        </div>
+      </div>`;
+  } else {
+    dupWhatifEl.innerHTML = '<div class="plotly-empty">Chưa có dữ liệu DuPont.</div>';
+  }
+
+  /* ── Financial Ratios Table ── */
+  const tblRatiosEl = document.getElementById('tbl-ratios');
+  if (tblRatiosEl && ratioData.length) {
+    const keyRatios = ['Quarter','Current_Ratio','Quick_Ratio','DE_Ratio','Debt_Ratio','Asset_Turnover','ROA','ROE'];
+    const displayRows = ratioData.slice(-16).map(r => {
+      const row = {};
+      keyRatios.forEach(k => { if (r[k] !== undefined) row[k] = typeof r[k] === 'number' ? r[k].toFixed(3) : r[k]; });
+      return row;
+    });
+    tblRatiosEl.innerHTML = makeTable(displayRows);
+  } else if (tblRatiosEl) {
+    tblRatiosEl.innerHTML = '<div class="plotly-empty">Chưa có dữ liệu Tỷ số tài chính.</div>';
+  }
+
+  /* ── NEW: Sensitivity Line Model ── */
+  if (impactData.length) {
+    const vipVars = impactData.filter(r => parseFloat(r['PLSR_Mean_VIP']) > 1.0);
+    if (vipVars.length) {
+      // Show VIP table
+      document.getElementById('tbl-vip').innerHTML = makeTable(
+        vipVars.map(r => ({
+          'Target': r['Target'],
+          'Feature': r['Feature'],
+          'PLSR VIP': parseFloat(r['PLSR_Mean_VIP']).toFixed(3),
+          'ElasticNet Coef': parseFloat(r['ElasticNet_Mean_Coef']).toFixed(4),
+        }))
+      );
+
+      // Sensitivity Line: per Target, sum VIP*coef*20 for +20% and -20%
+      const targets = [...new Set(vipVars.map(r => r['Target']))];
+      const sensTraces = targets.map((t, ti) => {
+        const vars = vipVars.filter(r => r['Target'] === t);
+        const sum = (sign) => vars.reduce((acc, r) => acc + sign * Math.abs(parseFloat(r['ElasticNet_Mean_Coef']) || 0) * 20, 0);
+        const xLabels = ['− Tiêu cực\n(−20%)', 'Hiện tại\n(0%)', '+ Tích cực\n(+20%)'];
+        return {
+          x: xLabels,
+          y: [sum(-1), 0, sum(1)],
+          mode: 'lines+markers+text',
+          text: [sum(-1).toFixed(3), '0', sum(1).toFixed(3)],
+          textposition: 'top center',
+          name: t,
+          line: { width: 3, color: COLORS[ti % COLORS.length] },
+          marker: { size: 10 }
+        };
+      });
+      plot('chart-sensitivity', sensTraces, {
+        title: 'Sensitivity Line — Δ Mục tiêu theo Kịch bản (+/- 20% tất cả biến VIP>1)',
+        yaxis: { ...PLOTLY_LAYOUT.yaxis, title: 'Δ Mục tiêu (đơn vị chuẩn hóa)', zeroline: true },
+        xaxis: { ...PLOTLY_LAYOUT.xaxis, title: 'Kịch bản' },
+        legend: { orientation: 'h', y: -0.25 }
+      });
+    } else {
+      document.getElementById('chart-sensitivity').innerHTML = '<div class="plotly-empty">Không có biến VIP > 1.</div>';
+    }
+  }
+}
+
+/* Run after scripts load */
+window.addEventListener('load', main);
+</script>
+</body>
+</html>

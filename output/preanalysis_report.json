@@ -1,0 +1,15 @@
+{
+  "audit_rate_pct": 19.23,
+  "total_quarters": 78,
+  "audited_quarters": 15,
+  "max_consecutive_unaudited": 15,
+  "missing_rate_pct": 0.0,
+  "data_quality_flag": "WARNING",
+  "policy_keywords_found": [
+    "     Dự phòng giảm giá ĐTNH",
+    "     Dự phòng",
+    "     Dự phòng giảm giá các khoản đầu tư ngắn hạn, dài hạn",
+    "     Chi phí khấu hao tài sản cố định"
+  ],
+  "notes": "~19% quý có kiểm toán đầy đủ — ưu tiên dùng Q4 (thường là quý kiểm toán năm). Dữ liệu chưa kiểm toán vẫn được dùng, chỉ gắn cờ cảnh báo."
+}

@@ -1,0 +1,109 @@
+﻿Chỉ số Hiệu quả (Trend),Biến Cấu trúc,Lag (quý),Tương quan (CCF)
+ROA (%),HTK/TTS (%),-4,-0.192
+ROA (%),HTK/TTS (%),-3,-0.1451
+ROA (%),HTK/TTS (%),-2,-0.0943
+ROA (%),HTK/TTS (%),-1,-0.0367
+ROA (%),HTK/TTS (%),0,0.0277
+ROA (%),HTK/TTS (%),1,0.0858
+ROA (%),HTK/TTS (%),2,0.1632
+ROA (%),HTK/TTS (%),3,0.2411
+ROA (%),HTK/TTS (%),4,0.3143
+ROA (%),Nợ/TTS (%),-4,-0.0809
+ROA (%),Nợ/TTS (%),-3,-0.1689
+ROA (%),Nợ/TTS (%),-2,-0.2287
+ROA (%),Nợ/TTS (%),-1,-0.2664
+ROA (%),Nợ/TTS (%),0,-0.2694
+ROA (%),Nợ/TTS (%),1,-0.2896
+ROA (%),Nợ/TTS (%),2,-0.2842
+ROA (%),Nợ/TTS (%),3,-0.2685
+ROA (%),Nợ/TTS (%),4,-0.2357
+ROA (%),Phải thu/TTS (%),-4,-0.0423
+ROA (%),Phải thu/TTS (%),-3,0.0114
+ROA (%),Phải thu/TTS (%),-2,0.0539
+ROA (%),Phải thu/TTS (%),-1,0.0926
+ROA (%),Phải thu/TTS (%),0,0.1283
+ROA (%),Phải thu/TTS (%),1,0.1673
+ROA (%),Phải thu/TTS (%),2,0.1996
+ROA (%),Phải thu/TTS (%),3,0.222
+ROA (%),Phải thu/TTS (%),4,0.2369
+ROA (%),Nợ NH/TTS (%),-4,-0.0198
+ROA (%),Nợ NH/TTS (%),-3,-0.0672
+ROA (%),Nợ NH/TTS (%),-2,-0.1081
+ROA (%),Nợ NH/TTS (%),-1,-0.1413
+ROA (%),Nợ NH/TTS (%),0,-0.1694
+ROA (%),Nợ NH/TTS (%),1,-0.1727
+ROA (%),Nợ NH/TTS (%),2,-0.1734
+ROA (%),Nợ NH/TTS (%),3,-0.1661
+ROA (%),Nợ NH/TTS (%),4,-0.1471
+ROE (%),HTK/TTS (%),-4,0.0938
+ROE (%),HTK/TTS (%),-3,0.163
+ROE (%),HTK/TTS (%),-2,0.227
+ROE (%),HTK/TTS (%),-1,0.2869
+ROE (%),HTK/TTS (%),0,0.3432
+ROE (%),HTK/TTS (%),1,0.3713
+ROE (%),HTK/TTS (%),2,0.4265
+ROE (%),HTK/TTS (%),3,0.4775
+ROE (%),HTK/TTS (%),4,0.5165
+ROE (%),Nợ/TTS (%),-4,0.2123
+ROE (%),Nợ/TTS (%),-3,0.2168
+ROE (%),Nợ/TTS (%),-2,0.225
+ROE (%),Nợ/TTS (%),-1,0.2332
+ROE (%),Nợ/TTS (%),0,0.2406
+ROE (%),Nợ/TTS (%),1,0.1847
+ROE (%),Nợ/TTS (%),2,0.1271
+ROE (%),Nợ/TTS (%),3,0.0566
+ROE (%),Nợ/TTS (%),4,-0.0111
+ROE (%),Phải thu/TTS (%),-4,0.1247
+ROE (%),Phải thu/TTS (%),-3,0.1873
+ROE (%),Phải thu/TTS (%),-2,0.2448
+ROE (%),Phải thu/TTS (%),-1,0.2989
+ROE (%),Phải thu/TTS (%),0,0.3492
+ROE (%),Phải thu/TTS (%),1,0.3991
+ROE (%),Phải thu/TTS (%),2,0.4347
+ROE (%),Phải thu/TTS (%),3,0.4523
+ROE (%),Phải thu/TTS (%),4,0.4534
+ROE (%),Nợ NH/TTS (%),-4,0.0169
+ROE (%),Nợ NH/TTS (%),-3,-0.018
+ROE (%),Nợ NH/TTS (%),-2,-0.053
+ROE (%),Nợ NH/TTS (%),-1,-0.0862
+ROE (%),Nợ NH/TTS (%),0,-0.1138
+ROE (%),Nợ NH/TTS (%),1,-0.133
+ROE (%),Nợ NH/TTS (%),2,-0.1561
+ROE (%),Nợ NH/TTS (%),3,-0.1754
+ROE (%),Nợ NH/TTS (%),4,-0.1956
+Biên LN Gộp (%),HTK/TTS (%),-4,-0.903
+Biên LN Gộp (%),HTK/TTS (%),-3,-0.922
+Biên LN Gộp (%),HTK/TTS (%),-2,-0.9401
+Biên LN Gộp (%),HTK/TTS (%),-1,-0.9522
+Biên LN Gộp (%),HTK/TTS (%),0,-0.9591
+Biên LN Gộp (%),HTK/TTS (%),1,-0.9608
+Biên LN Gộp (%),HTK/TTS (%),2,-0.9602
+Biên LN Gộp (%),HTK/TTS (%),3,-0.9569
+Biên LN Gộp (%),HTK/TTS (%),4,-0.9504
+Biên LN Gộp (%),Nợ/TTS (%),-4,-0.2619
+Biên LN Gộp (%),Nợ/TTS (%),-3,-0.2908
+Biên LN Gộp (%),Nợ/TTS (%),-2,-0.316
+Biên LN Gộp (%),Nợ/TTS (%),-1,-0.3322
+Biên LN Gộp (%),Nợ/TTS (%),0,-0.3338
+Biên LN Gộp (%),Nợ/TTS (%),1,-0.3014
+Biên LN Gộp (%),Nợ/TTS (%),2,-0.2631
+Biên LN Gộp (%),Nợ/TTS (%),3,-0.2204
+Biên LN Gộp (%),Nợ/TTS (%),4,-0.1768
+Biên LN Gộp (%),Phải thu/TTS (%),-4,-0.7705
+Biên LN Gộp (%),Phải thu/TTS (%),-3,-0.7902
+Biên LN Gộp (%),Phải thu/TTS (%),-2,-0.8113
+Biên LN Gộp (%),Phải thu/TTS (%),-1,-0.8326
+Biên LN Gộp (%),Phải thu/TTS (%),0,-0.8548
+Biên LN Gộp (%),Phải thu/TTS (%),1,-0.8736
+Biên LN Gộp (%),Phải thu/TTS (%),2,-0.8855
+Biên LN Gộp (%),Phải thu/TTS (%),3,-0.8941
+Biên LN Gộp (%),Phải thu/TTS (%),4,-0.9007
+Biên LN Gộp (%),Nợ NH/TTS (%),-4,0.3847
+Biên LN Gộp (%),Nợ NH/TTS (%),-3,0.3889
+Biên LN Gộp (%),Nợ NH/TTS (%),-2,0.3938
+Biên LN Gộp (%),Nợ NH/TTS (%),-1,0.4014
+Biên LN Gộp (%),Nợ NH/TTS (%),0,0.4036
+Biên LN Gộp (%),Nợ NH/TTS (%),1,0.4106
+Biên LN Gộp (%),Nợ NH/TTS (%),2,0.4178
+Biên LN Gộp (%),Nợ NH/TTS (%),3,0.4262
+Biên LN Gộp (%),Nợ NH/TTS (%),4,0.4356
