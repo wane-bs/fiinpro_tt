@@ -177,7 +177,7 @@
         <div class="tbl-wrap" id="tbl-validation"><div class="loading">…</div></div>
       </div>
       <div class="card">
-        <h3>Chỉ số Mô hình (Random Forest)</h3>
+        <h3>Chỉ số Mô hình (Dual-Auditor)</h3>
         <div class="tbl-wrap" id="tbl-metrics"><div class="loading">…</div></div>
       </div>
     </div>
@@ -189,6 +189,42 @@
         <div id="report-md">Đang tải…</div>
       </div>
     </details>
+
+    <hr class="divider" />
+    <div class="section-title">1.2 Sơ đồ Cơ cấu Tài sản &amp; Nguồn vốn (Common-size Stacked Bar)</div>
+    <div class="section-desc">Phương pháp: Common-size Analysis — Tỷ trọ ng = (Khoản mục / Tổng) × 100%</div>
+    <div class="card" style="margin-bottom:16px"><div class="chart" id="chart-stack-ts"></div></div>
+    <div class="card" style="margin-bottom:16px"><div class="chart" id="chart-stack-nv"></div></div>
+    <div class="card" style="margin-bottom:16px"><div class="chart" id="chart-stack-kqkd"></div></div>
+
+    <hr class="divider" />
+    <div class="section-title">📊 Bảng Đối chiếu &amp; Biểu đồ Tròn Mô hình</div>
+    <div class="section-desc">Biểu đồ tròn = Tỷ trọ ng trung bình lịch sử (mean toàn bộ quý) — tổng có thể ≠ 100%</div>
+    <div class="grid-2" style="margin-bottom:16px">
+      <div class="card">
+        <h3>Thành phần Tài sản — So sánh Quý Đầu vs Cuối</h3>
+        <div id="tbl-compare-ts"></div>
+      </div>
+      <div class="card"><div class="chart" id="pie-ts"></div></div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Thành phần Nguồn vốn — So sánh Quý Đầu vs Cuối</h3>
+        <div id="tbl-compare-nv"></div>
+      </div>
+      <div class="card"><div class="chart" id="pie-nv"></div></div>
+    </div>
+
+    <hr class="divider" />
+    <div class="section-title">1.3 Kết luận Tự động Loại hình Kinh doanh</div>
+    <div class="section-desc">Phương pháp: Rule-based Classification dựa trên chỉ số quý gần nhất</div>
+    <div id="biz-classifier"><div class="loading">…</div></div>
+
+    <hr class="divider" />
+    <div class="section-title">1.4 Sức khỏe Thanh khoản</div>
+    <div class="section-desc">Current Ratio = TSNH/NNH — Quick Ratio = (TSNH−HTK)/NNH — Ngưỡng an toàn: ≥ 1.0</div>
+    <div class="metric-row" id="liquidity-metrics"><div class="loading">…</div></div>
+    <div id="liquidity-alert"></div>
   </section>
 
   <!-- ── Tab 2: Giá & Động lượng ── -->
@@ -219,6 +255,16 @@
     <div class="section-desc"><em>Giả thuyết: Doanh thu thường đạt đỉnh vào Q4 và tạo đáy vào Q1.</em></div>
     <div class="card"><div class="chart" id="chart-rev-season"></div></div>
     <div id="alert-rev-season"></div>
+
+    <hr class="divider" />
+    <div class="section-title">2.1 DuPont What-if Calculator — Kịch bản tăng 10% ROE</div>
+    <div class="section-desc">Phương pháp: Giữ nguyên 2 nhân tố, tính nhân tố còn lại cần thiết để ROE tăng 10%</div>
+    <div id="dupont-whatif"><div class="loading">…</div></div>
+
+    <hr class="divider" />
+    <div class="section-title">2.2 Phân tích Tỷ số Tài chính (Financial Ratios)</div>
+    <div class="section-desc">Các tỷ số tài chính quan trọng: Khả năng thanh toán, Hiệu quả hoạt động, Khả năng sinh lời, Đòn bẩy tài chính.</div>
+    <div class="tbl-wrap" id="tbl-ratios"><div class="loading">…</div></div>
   </section>
 
   <!-- ── Tab 4: Tương quan Chéo ── -->
@@ -230,7 +276,6 @@
 
   <!-- ── Tab 5: Cơ cấu Tác động ── -->
   <section id="tab-structure" class="tab-panel">
-    <div class="section-title">Cơ cấu &amp; Tác động (Machine Learning — RandomForest)</div>
     <div class="section-desc">Luồng 4: Tỷ trọng và Top 5 thành tố ảnh hưởng lớn nhất tới các biến mục tiêu.</div>
     <div class="grid-3" id="charts-impact"></div>
     <hr class="divider" />
@@ -331,7 +376,8 @@ async function main() {
   const [
     priceData, revData, crossData, valData, metricsData,
     impactData, tsData, priceSeasonData, revSeasonData,
-    reportMd, priceInsight, revInsight
+    reportMd, priceInsight, revInsight,
+    vertData, ratioData, dupData
   ] = await Promise.all([
     fetchCSV('price_analysis_features.csv'),
     fetchCSV('revenue_growth.csv'),
@@ -344,7 +390,10 @@ async function main() {
     fetchCSV('revenue_seasonality.csv'),
     fetchText('analysis_report.md'),
     fetchText('price_seasonality_insight.txt'),
-    fetchText('revenue_seasonality_insight.txt')
+    fetchText('revenue_seasonality_insight.txt'),
+    fetchCSV('vertical_analysis.csv'),
+    fetchCSV('financial_ratios.csv'),
+    fetchCSV('dupont_analysis.csv'),
   ]);
 
   /* Check if any data loaded */
@@ -563,6 +612,203 @@ git push</pre>
         });
       });
     });
+  }
+  /* ── NEW: Vertical Analysis — Stacked Bars + Pie + Classifier + Liquidity ── */
+  const COLORS = ['#58a6ff','#3fb950','#e3b341','#f78166','#db61a2','#79c0ff','#56d364','#ff7b72'];
+  if (vertData.length) {
+    const qCols = Object.keys(vertData[0]).filter(k => !['Chỉ_tiêu','Báo_cáo','Mẫu_số'].includes(k));
+    const firstQ = qCols[0], lastQ = qCols[qCols.length - 1];
+
+    // Helper: get items for one section
+    function vertItems(mauSo) {
+      return vertData.filter(r => r['Mẫu_số'] === mauSo && r['Báo_cáo'] === 'BCĐKT');
+    }
+    function vertKQKD() {
+      return vertData.filter(r => r['Báo_cáo'] === 'KQKD');
+    }
+
+    // Stacked bars
+    const stackDefs = [
+      { items: vertItems('Tổng tài sản'),   id: 'chart-stack-ts',   title: 'Cơ cấu Tài sản (% Tổng tài sản)' },
+      { items: vertItems('Tổng nguồn vốn'), id: 'chart-stack-nv',   title: 'Cơ cấu Nguồn vốn (% Tổng nguồn vốn)' },
+      { items: vertKQKD(),                    id: 'chart-stack-kqkd', title: 'Cơ cấu KQKD (% Doanh thu thuần)' },
+    ];
+    stackDefs.forEach(({items, id, title}) => {
+      if (!items.length) { document.getElementById(id).innerHTML = '<div class="plotly-empty">Không có dữ liệu</div>'; return; }
+      const traces = items.map((r, ci) => ({
+        x: qCols, y: qCols.map(q => r[q] ?? null),
+        type: 'bar', name: r['Chỉ_tiêu'],
+        marker: { color: COLORS[ci % COLORS.length] }
+      }));
+      plot(id, traces, { title, barmode: 'relative',
+        xaxis: { ...PLOTLY_LAYOUT.xaxis, title: 'Quý', tickangle: -45 },
+        yaxis: { ...PLOTLY_LAYOUT.yaxis, title: 'Tỷ trọ ng (%)' },
+        legend: { orientation: 'h', y: -0.35 } });
+    });
+
+    // Pie charts + Compare tables
+    const pieDefs = [
+      { items: vertItems('Tổng tài sản'),   pieId: 'pie-ts', tblId: 'tbl-compare-ts', label: 'Tài sản' },
+      { items: vertItems('Tổng nguồn vốn'), pieId: 'pie-nv', tblId: 'tbl-compare-nv', label: 'Nguồn vốn' },
+    ];
+    pieDefs.forEach(({items, pieId, tblId, label}) => {
+      if (!items.length) return;
+      const names = items.map(r => r['Chỉ_tiêu']);
+      const avgVals = items.map(r => {
+        const nums = qCols.map(q => parseFloat(r[q]) || 0);
+        return nums.reduce((s, v) => s + v, 0) / nums.length;
+      });
+
+      // Pie
+      Plotly.newPlot(pieId, [{ type: 'pie', labels: names, values: avgVals.map(Math.abs),
+        textinfo: 'label+percent',
+        hovertemplate: '<b>%{label}</b><br>TB Lịch sử: %{value:.1f}%<extra></extra>',
+        marker: { colors: COLORS } }],
+        Object.assign({}, PLOTLY_LAYOUT, { title: `Cữ cấu ${label} — TB Lịch sử`, height: 340 }),
+        { responsive: true, displayModeBar: false }
+      );
+
+      // Compare table
+      const rows = items.map(r => ({
+        'Khoản mục': r['Chỉ_tiêu'],
+        [`${firstQ} (%)`]: (parseFloat(r[firstQ]) || 0).toFixed(2),
+        [`${lastQ} (%)`]: (parseFloat(r[lastQ]) || 0).toFixed(2),
+        'Biến động (+/-)': ((parseFloat(r[lastQ]) || 0) - (parseFloat(r[firstQ]) || 0)).toFixed(2),
+      }));
+      document.getElementById(tblId).innerHTML = makeTable(rows);
+    });
+
+    // Business Model Classifier
+    const lastRatio = ratioData.length ? ratioData[ratioData.length - 1] : {};
+    const tscdRow = vertItems('Tổng tài sản').find(r => r['Chỉ_tiêu'] === 'Tài sản cố định');
+    const tienRow = vertItems('Tổng tài sản').find(r => r['Chỉ_tiêu'] === 'Tiền và tương đương');
+    const tscdPct  = tscdRow  ? (parseFloat(tscdRow[lastQ])  || 0) : 0;
+    const tienPct  = tienRow  ? (parseFloat(tienRow[lastQ])  || 0) : 0;
+    const atRatio  = parseFloat(lastRatio['Asset_Turnover']) || 0;
+    const deRatio  = parseFloat(lastRatio['DE_Ratio'])       || 0;
+    const rules = [
+      [tscdPct > 40,  '⚙️', 'Mô hình Thâm dụng vốn',       `TSCĐ/Tổng TS = ${tscdPct.toFixed(1)}% > 40%`],
+      [atRatio > 1.5, '🔄', 'Bán lẻ / Quay vòng nhanh',    `Vòng quay TS = ${atRatio.toFixed(2)} > 1.5`],
+      [deRatio > 2.0, '⚠️', 'Sử dụng Đòn bẩy cao',         `Nợ/VCSH = ${deRatio.toFixed(2)} > 2.0`],
+      [tienPct > 20,  '💰', 'Mô hình Giàu tiền mặt',         `Tiền/Tổng TS = ${tienPct.toFixed(1)}% > 20%`],
+    ];
+    const matched = rules.filter(([cond]) => cond);
+    const bizEl = document.getElementById('biz-classifier');
+    if (matched.length) {
+      bizEl.innerHTML = matched.map(([,icon,label,detail]) =>
+        `<div class="alert success">${icon} <strong>${label}</strong> — ${detail}</div>`
+      ).join('');
+    } else {
+      bizEl.innerHTML = `<div class="alert info">📋 <strong>Mô hình Đầu tư hỗn hợp</strong> — Không thuộc phân loại đặc biệt nào. Nợ/VCSH=${deRatio.toFixed(2)}, TSCĐ=${tscdPct.toFixed(1)}%, Quay vòng TS=${atRatio.toFixed(2)}</div>`;
+    }
+
+    // Liquidity metrics
+    const curR = parseFloat(lastRatio['Current_Ratio']) || 0;
+    const qckR = parseFloat(lastRatio['Quick_Ratio'])   || 0;
+    const lastQtr = lastRatio['Quarter'] || '';
+    const liqEl  = document.getElementById('liquidity-metrics');
+    liqEl.innerHTML = [
+      { label: 'Quý', val: lastQtr, color: 'var(--text)' },
+      { label: 'Thanh toán hiện hành', val: curR.toFixed(2), color: curR >= 1 ? 'var(--accent3)' : 'var(--accent2)' },
+      { label: 'Thanh toán nhanh',       val: qckR.toFixed(2), color: qckR >= 1 ? 'var(--accent3)' : 'var(--accent2)' },
+    ].map(m => `<div class="metric"><div class="label">${m.label}</div><div class="value" style="color:${m.color}">${m.val}</div></div>`).join('');
+    const liqAlert = document.getElementById('liquidity-alert');
+    if (curR >= 1 && qckR >= 1) liqAlert.innerHTML = '<div class="alert success">✅ Sức khỏe thanh khoản ở mức <strong>Tốt</strong> — đảm bảo khả năng chi trả nghĩa vụ ngắn hạn.</div>';
+    else if (curR >= 1) liqAlert.innerHTML = '<div class="alert warn">⚠️ Thanh toán hiện hành ổn nhưng Quick Ratio thấp — hàng tồn kho chiếm tỷ trọ ng lớn.</div>';
+    else liqAlert.innerHTML = '<div class="alert warn">❌ Thanh khoản <strong>yếu</strong> — rủi ro không đủ tài sản ngắn hạn để thanh toán nợ đến hạn.</div>';
+  }
+
+  /* ── NEW: DuPont What-if Calculator ── */
+  const dupWhatifEl = document.getElementById('dupont-whatif');
+  const lastDup = dupData.filter(r => r['ROE_DuPont_Pct'] != null).slice(-1)[0];
+  if (lastDup) {
+    const roe  = parseFloat(lastDup['ROE_DuPont_Pct']) || 0;
+    const nm   = parseFloat(lastDup['Net_Margin_Pct'])  || 0;
+    const at   = parseFloat(lastDup['Asset_Turnover'])  || 0;
+    const em   = parseFloat(lastDup['Equity_Multiplier']) || 0;
+    const roeT = roe * 1.10;
+    const atNeed = (nm !== 0 && em !== 0) ? roeT / (nm / 100 * em * 100) : null;
+    const nmNeed = (at !== 0 && em !== 0) ? roeT / (at * em)             : null;
+    dupWhatifEl.innerHTML = `
+      <div class="alert info" style="margin-bottom:12px">📊 <strong>ROE hiện tại: ${roe.toFixed(2)}%</strong> → Mục tiêu (+10%): <strong>${roeT.toFixed(2)}%</strong></div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Kịch bản 1: Cải thiện Hiệu suất</h3>
+          <p style="color:var(--text-muted);font-size:.82rem;margin-bottom:12px">Tăng Vòng quay Tài sản, giữ nguyên Biên LN &amp; Đòn bẩy</p>
+          <div class="metric"><div class="label">Vòng quay TS cần đạt</div>
+            <div class="value" style="color:var(--accent3)">${atNeed !== null ? atNeed.toFixed(4) : 'N/A'}</div>
+            <div style="color:var(--text-muted);font-size:.75rem;margin-top:4px">Δ ${atNeed !== null ? (atNeed - at >= 0 ? '+' : '') + (atNeed - at).toFixed(4) : ''} so với hiện tại (${at.toFixed(4)})</div>
+          </div>
+          <p style="color:var(--text-muted);font-size:.8rem;margin-top:10px">💡 Đẩy mạnh thu hồi Phải thu &amp; tối ưu hóa Hàng tồn kho.</p>
+        </div>
+        <div class="card">
+          <h3>Kịch bản 2: Cải thiện Biên LN</h3>
+          <p style="color:var(--text-muted);font-size:.82rem;margin-bottom:12px">Tăng Net Margin, giữ nguyên Vòng quay &amp; Đòn bẩy</p>
+          <div class="metric"><div class="label">Biên LN ròng cần đạt</div>
+            <div class="value" style="color:var(--accent3)">${nmNeed !== null ? nmNeed.toFixed(2) + '%' : 'N/A'}</div>
+            <div style="color:var(--text-muted);font-size:.75rem;margin-top:4px">Δ ${nmNeed !== null ? (nmNeed - nm >= 0 ? '+' : '') + (nmNeed - nm).toFixed(2) + '%' : ''} so với hiện tại (${nm.toFixed(2)}%)</div>
+          </div>
+          <p style="color:var(--text-muted);font-size:.8rem;margin-top:10px">💡 Tiết giảm Chi phí quản lý doanh nghiệp.</p>
+        </div>
+      </div>`;
+  } else {
+    dupWhatifEl.innerHTML = '<div class="plotly-empty">Chưa có dữ liệu DuPont.</div>';
+  }
+
+  /* ── Financial Ratios Table ── */
+  const tblRatiosEl = document.getElementById('tbl-ratios');
+  if (tblRatiosEl && ratioData.length) {
+    const keyRatios = ['Quarter','Current_Ratio','Quick_Ratio','DE_Ratio','Debt_Ratio','Asset_Turnover','ROA','ROE'];
+    const displayRows = ratioData.slice(-16).map(r => {
+      const row = {};
+      keyRatios.forEach(k => { if (r[k] !== undefined) row[k] = typeof r[k] === 'number' ? r[k].toFixed(3) : r[k]; });
+      return row;
+    });
+    tblRatiosEl.innerHTML = makeTable(displayRows);
+  } else if (tblRatiosEl) {
+    tblRatiosEl.innerHTML = '<div class="plotly-empty">Chưa có dữ liệu Tỷ số tài chính.</div>';
+  }
+
+  /* ── NEW: Sensitivity Line Model ── */
+  if (impactData.length) {
+    const vipVars = impactData.filter(r => parseFloat(r['PLSR_Mean_VIP']) > 1.0);
+    if (vipVars.length) {
+      // Show VIP table
+      document.getElementById('tbl-vip').innerHTML = makeTable(
+        vipVars.map(r => ({
+          'Target': r['Target'],
+          'Feature': r['Feature'],
+          'PLSR VIP': parseFloat(r['PLSR_Mean_VIP']).toFixed(3),
+          'ElasticNet Coef': parseFloat(r['ElasticNet_Mean_Coef']).toFixed(4),
+        }))
+      );
+
+      // Sensitivity Line: per Target, sum VIP*coef*20 for +20% and -20%
+      const targets = [...new Set(vipVars.map(r => r['Target']))];
+      const sensTraces = targets.map((t, ti) => {
+        const vars = vipVars.filter(r => r['Target'] === t);
+        const sum = (sign) => vars.reduce((acc, r) => acc + sign * Math.abs(parseFloat(r['ElasticNet_Mean_Coef']) || 0) * 20, 0);
+        const xLabels = ['− Tiêu cực\n(−20%)', 'Hiện tại\n(0%)', '+ Tích cực\n(+20%)'];
+        return {
+          x: xLabels,
+          y: [sum(-1), 0, sum(1)],
+          mode: 'lines+markers+text',
+          text: [sum(-1).toFixed(3), '0', sum(1).toFixed(3)],
+          textposition: 'top center',
+          name: t,
+          line: { width: 3, color: COLORS[ti % COLORS.length] },
+          marker: { size: 10 }
+        };
+      });
+      plot('chart-sensitivity', sensTraces, {
+        title: 'Sensitivity Line — Δ Mục tiêu theo Kịch bản (+/- 20% tất cả biến VIP>1)',
+        yaxis: { ...PLOTLY_LAYOUT.yaxis, title: 'Δ Mục tiêu (đơn vị chuẩn hóa)', zeroline: true },
+        xaxis: { ...PLOTLY_LAYOUT.xaxis, title: 'Kịch bản' },
+        legend: { orientation: 'h', y: -0.25 }
+      });
+    } else {
+      document.getElementById('chart-sensitivity').innerHTML = '<div class="plotly-empty">Không có biến VIP > 1.</div>';
+    }
   }
 }
 
