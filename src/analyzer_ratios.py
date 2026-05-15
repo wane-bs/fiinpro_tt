@@ -98,19 +98,28 @@ def compute_vertical_analysis(data_dict: dict, output_dir: str) -> pd.DataFrame:
             total_assets.values.astype(float) if total_assets is not None else None
         )
         if nv_vals is not None:
-            capital_items = [
-                ('NỢ NGẮN HẠN', 'BCĐKT'),
-                ('NỢ DÀI HẠN', 'BCĐKT'),
-                ('VỐN CHỦ SỞ HỮU', 'BCĐKT'),
+            def get_nv_vals(keyword):
+                row = _find_row(bctc, keyword)
+                return row.values.astype(float) if row is not None else np.zeros_like(nv_vals)
+
+            nno_ngan_v = get_nv_vals('NỢ NGẮN HẠN')
+            nno_dai_v = get_nv_vals('NỢ DÀI HẠN')
+            vcsh_v = get_nv_vals('VỐN CHỦ SỞ HỮU')
+            
+            nv_khac_v = np.maximum(nv_vals - (nno_ngan_v + nno_dai_v + vcsh_v), 0)
+            
+            capital_components = [
+                ('NỢ NGẮN HẠN', nno_ngan_v),
+                ('NỢ DÀI HẠN', nno_dai_v),
+                ('VỐN CHỦ SỞ HỮU', vcsh_v),
+                ('Nguồn vốn khác', nv_khac_v),
             ]
-            for keyword, source in capital_items:
-                row_data = _find_row(bctc, keyword)
-                if row_data is not None:
-                    pct = np.where(nv_vals != 0,
-                                   row_data.values.astype(float) / nv_vals * 100,
-                                   np.nan)
-                    rows.append({'Chỉ_tiêu': keyword.split('|')[0],
-                                 'Báo_cáo': source,
+            
+            for name, vals in capital_components:
+                if np.any(vals > 0):
+                    pct = np.where(nv_vals != 0, vals / nv_vals * 100, np.nan)
+                    rows.append({'Chỉ_tiêu': name,
+                                 'Báo_cáo': 'BCĐKT',
                                  'Mẫu_số': 'Tổng nguồn vốn',
                                  **dict(zip(quarters, np.round(pct, 2)))})
 
@@ -119,20 +128,31 @@ def compute_vertical_analysis(data_dict: dict, output_dir: str) -> pd.DataFrame:
         net_rev = _find_row(kqkd, 'Doanh thu thuan|Doanh thu bán hàng')
         if net_rev is not None:
             rev_vals = net_rev.values.astype(float)
-            kqkd_items = [
-                ('Giá vốn', 'KQKD'),
-                ('Chi phí bán hàng|Chi phi ban hang', 'KQKD'),
-                ('Chi phí quản lý|Chi phi quan ly|Chi phí QLDN', 'KQKD'),
-                ('Lợi nhuận thuần|Lợi nhuận sau thuế', 'KQKD'),
+            def get_kq_vals(keyword):
+                row = _find_row(kqkd, keyword)
+                return row.values.astype(float) if row is not None else np.zeros_like(rev_vals)
+                
+            gia_von_v = np.abs(get_kq_vals('Giá vốn|Gia von'))
+            cp_bh_v = np.abs(get_kq_vals('Chi phí bán hàng|Chi phi ban hang'))
+            cp_ql_v = np.abs(get_kq_vals('Chi phí quản lý|Chi phi quan ly|Chi phí QLDN'))
+            ln_thuan_v = get_kq_vals(r'Lãi/\(lỗ\) thuần sau thuế|Lợi nhuận sau thuế|Lợi nhuận thuần')
+            
+            cp_khac_v = rev_vals - (gia_von_v + cp_bh_v + cp_ql_v + ln_thuan_v)
+            
+            kqkd_components = [
+                ('Giá vốn', gia_von_v),
+                ('Chi phí bán hàng', cp_bh_v),
+                ('Chi phí quản lý', cp_ql_v),
+                ('Thuế & CP Khác (Ròng)', cp_khac_v),
+                ('Lợi nhuận sau thuế', ln_thuan_v),
             ]
-            for keyword, source in kqkd_items:
-                row_data = _find_row(kqkd, keyword)
-                if row_data is not None:
-                    pct = np.where(rev_vals != 0,
-                                   row_data.values.astype(float) / rev_vals * 100,
-                                   np.nan)
-                    rows.append({'Chỉ_tiêu': keyword.split('|')[0],
-                                 'Báo_cáo': source,
+            
+            for name, vals in kqkd_components:
+                # Bỏ qua dòng nếu toàn bộ mảng bằng 0 (để tránh rác)
+                if np.any(np.abs(vals) > 0):
+                    pct = np.where(rev_vals != 0, vals / rev_vals * 100, np.nan)
+                    rows.append({'Chỉ_tiêu': name,
+                                 'Báo_cáo': 'KQKD',
                                  'Mẫu_số': 'Doanh thu thuần',
                                  **dict(zip(quarters, np.round(pct, 2)))})
 

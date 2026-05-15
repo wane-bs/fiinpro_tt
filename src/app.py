@@ -17,7 +17,7 @@ _PROJECT_ROOT = os.path.dirname(_SCRIPT_DIR)
 # ─────────────────────────────────────────────────────────────────────────────
 # DATA LOADING
 # ─────────────────────────────────────────────────────────────────────────────
-@st.cache_data(ttl=0)
+@st.cache_data(ttl=1)  # Đặt ttl=1s để tự động tải lại dữ liệu mới nhất mà không bị kẹt cache
 def load_data():
     base = os.path.join(_PROJECT_ROOT, "output")
 
