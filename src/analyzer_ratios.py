@@ -58,21 +58,38 @@ def compute_vertical_analysis(data_dict: dict, output_dir: str) -> pd.DataFrame:
         # Mảng Tài sản → Mẫu_số = 'Tổng tài sản'
         if total_assets is not None:
             ta_vals = total_assets.values.astype(float)
-            asset_items = [
-                ('Tiền và tương đương', 'BCĐKT'),
-                ('Hàng tồn kho', 'BCĐKT'),
-                ('Tài sản cố định', 'BCĐKT'),
-                ('Phải thu ngắn hạn|Phải thu', 'BCĐKT'),
-                ('TÀI SẢN NGẮN HẠN', 'BCĐKT'),
+            # Lấy dữ liệu thô
+            def get_vals(keyword):
+                row = _find_row(bctc, keyword)
+                return row.values.astype(float) if row is not None else np.zeros_like(ta_vals)
+
+            tien_v = get_vals('Tiền và tương đương')
+            phai_thu_v = get_vals('Phải thu ngắn hạn|Phải thu')
+            htk_v = get_vals('Hàng tồn kho')
+            tscd_v = get_vals('Tài sản cố định')
+            
+            tsnh_v = get_vals('TÀI SẢN NGẮN HẠN')
+            tsdh_v = get_vals('TÀI SẢN DÀI HẠN')
+            
+            # Tính toán phần còn lại để không tính trùng (Double Counting)
+            tsnh_khac_v = np.maximum(tsnh_v - (tien_v + phai_thu_v + htk_v), 0)
+            tsdh_khac_v = np.maximum(tsdh_v - tscd_v, 0)
+            
+            asset_components = [
+                ('Tiền và tương đương', tien_v),
+                ('Phải thu ngắn hạn', phai_thu_v),
+                ('Hàng tồn kho', htk_v),
+                ('Tài sản ngắn hạn khác', tsnh_khac_v),
+                ('Tài sản cố định', tscd_v),
+                ('Tài sản dài hạn khác', tsdh_khac_v),
             ]
-            for keyword, source in asset_items:
-                row_data = _find_row(bctc, keyword)
-                if row_data is not None:
-                    pct = np.where(ta_vals != 0,
-                                   row_data.values.astype(float) / ta_vals * 100,
-                                   np.nan)
-                    rows.append({'Chỉ_tiêu': keyword.split('|')[0],
-                                 'Báo_cáo': source,
+            
+            for name, vals in asset_components:
+                # Chỉ xuất nếu khoản mục có dữ liệu khác 0
+                if np.any(vals > 0):
+                    pct = np.where(ta_vals != 0, vals / ta_vals * 100, np.nan)
+                    rows.append({'Chỉ_tiêu': name,
+                                 'Báo_cáo': 'BCĐKT',
                                  'Mẫu_số': 'Tổng tài sản',
                                  **dict(zip(quarters, np.round(pct, 2)))})
 
@@ -83,7 +100,7 @@ def compute_vertical_analysis(data_dict: dict, output_dir: str) -> pd.DataFrame:
         if nv_vals is not None:
             capital_items = [
                 ('NỢ NGẮN HẠN', 'BCĐKT'),
-                ('NỢ PHẢI TRẢ', 'BCĐKT'),
+                ('NỢ DÀI HẠN', 'BCĐKT'),
                 ('VỐN CHỦ SỞ HỮU', 'BCĐKT'),
             ]
             for keyword, source in capital_items:

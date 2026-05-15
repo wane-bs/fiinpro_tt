@@ -1,20 +1,17 @@
 {
     "Quarter": "Q4/2025",
-    "Timestamp": "2026-03-18 19:36:53",
-    "Composite_Score": 7.1,
-    "Verdict": "TRUNG LẬP",
+    "Timestamp": "2026-05-15 16:20:45",
+    "Composite_Score": 49.3,
+    "Verdict": "MUA MẠNH",
     "Components": {
-        "Seasonality_Score": -50,
-        "Price_Momentum_Score": -1.9,
-        "Revenue_Momentum_Score": 32.4,
-        "Valuation_Band_Score": 14.0,
-        "Volume_Surge_Score": 100
+        "Health_Score": 38.9,
+        "Growth_Score": 36.0,
+        "Valuation_Score": 71.3
     },
     "Weights": {
-        "Seasonality": 0.25,
-        "Price_Momentum": 0.2,
-        "Revenue_Momentum": 0.2,
-        "Valuation": 0.25,
-        "Volume_Surge": 0.1
-    }
+        "Health": 0.3,
+        "Growth": 0.35,
+        "Valuation": 0.35
+    },
+    "Version": "v2_3pillars"
 }

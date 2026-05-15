@@ -1,0 +1,4 @@
+Scenario,Multiple_Adj,Total_EV,Net_Debt,Equity_Value,Fair_Price_VND,is_forward
+Bear,0.85,149900.53,14.47,149886.05,1703128.0,True
+Base,1.0,176353.56,14.47,176339.09,2003680.0,True
+Bull,1.15,202806.59,14.47,202792.12,2304232.0,True

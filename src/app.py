@@ -55,6 +55,10 @@ def load_data():
         "target_price":_csv("target_price_scenarios.csv"),
         "dcf_val":     _csv("dcf_valuation.csv"),
         "multiples":   _csv("multiples_valuation.csv"),
+        "sotp_wf":     _csv("sotp_waterfall.csv"),
+        "sotp_val":    _csv("sotp_valuation.csv"),
+        "sotp_sc":     _csv("sotp_scenarios.csv"),
+        "pe_fwd":      _csv("pe_forward_band.csv"),
         # Chương 4
         "cycle_ccf":   _csv("cycle_cross_correlation.csv"),
         "impact":      _csv("structure_impact.csv"),
@@ -608,6 +612,152 @@ with tab3:
     else:
         st.info("Chưa có Target Price. Hãy chạy `python main.py` để tạo.")
 
+    # ── 3.5: SoTP Waterfall (FPT Segment Valuation) ───────────────────
+    st.divider()
+    st.subheader("3.5 Định giá Tổng từng Phần — SoTP Waterfall (FPT)")
+    st.warning("⚠️ **Vùng dữ liệu ước tính** — Tỷ trọng phân đoạn dựa trên Báo cáo IR FPT 2024, không phải dữ liệu BCTC phân đoạn thực tế.")
+
+    sotp_wf = d["sotp_wf"]
+    sotp_sc = d["sotp_sc"]
+    sotp_val = d["sotp_val"]
+
+    if not sotp_wf.empty:
+        # IR Source Table
+        st.markdown("**📋 Tỷ trọng Phân đoạn FPT (Nguồn: Báo cáo Thường niên 2024)**")
+        ir_table = pd.DataFrame([
+            {"Mảng": "Công nghệ (Global IT + Domestic IT)", "Tỷ trọng DT": "62.0%", "Tăng trưởng YoY": "+24.4%", "Phương pháp": "P/E = 22.0"},
+            {"Mảng": "Viễn thông (FPT Telecom)", "Tỷ trọng DT": "27.0%", "Tăng trưởng YoY": "+11.3%", "Phương pháp": "EV/EBITDA = 6.5"},
+            {"Mảng": "Giáo dục & Khác", "Tỷ trọng DT": "11.0%", "Tăng trưởng YoY": "+15.1%", "Phương pháp": "P/E = 18.0"},
+        ])
+        st.dataframe(ir_table, hide_index=True, use_container_width=True)
+        st.caption("*Nguồn: FPT 12M/2024 Earnings Release, FPT Annual Report 2024 — fpt.com.vn*")
+
+        # Waterfall Chart
+        measures = []
+        for _, row in sotp_wf.iterrows():
+            if row['Type'] == 'total':
+                measures.append('total')
+            elif row['Type'] == 'deduction':
+                measures.append('relative')
+            else:
+                measures.append('relative')
+
+        fig_wf = go.Figure(go.Waterfall(
+            orientation="v",
+            measure=measures,
+            x=sotp_wf['Component'],
+            y=sotp_wf['Value'],
+            text=[f"{v:,.0f} tỷ" for v in sotp_wf['Value']],
+            textposition="outside",
+            increasing={"marker": {"color": "#2E7D32"}},
+            decreasing={"marker": {"color": "#D32F2F"}},
+            totals={"marker": {"color": "#1565C0"}},
+            connector={"line": {"color": "#555"}},
+        ))
+        fig_wf.update_layout(
+            title="SoTP Waterfall — Bóc tách Giá trị Tập đoàn FPT (tỷ VND)",
+            yaxis_title="Giá trị (tỷ VND)",
+            height=420,
+            showlegend=False,
+        )
+        st.plotly_chart(fig_wf, use_container_width=True, key="sotp_waterfall")
+
+        # SoTP Scenarios
+        if not sotp_sc.empty:
+            st.markdown("**Kịch bản SoTP:**")
+            col_sotp_chart, col_sotp_tbl = st.columns([2, 1])
+            with col_sotp_chart:
+                fig_sotp_sc = go.Figure()
+                colors_sotp = {"Bear": "#D32F2F", "Base": "#1565C0", "Bull": "#2E7D32"}
+                for _, row in sotp_sc.iterrows():
+                    sc = row["Scenario"]
+                    fig_sotp_sc.add_trace(go.Bar(
+                        name=sc, x=[sc], y=[row["Fair_Price_VND"]],
+                        marker_color=colors_sotp.get(sc, "#888"),
+                        text=f"{row['Fair_Price_VND']:,.0f} VND",
+                        textposition="auto",
+                    ))
+                fig_sotp_sc.update_layout(
+                    title="SoTP Fair Price (VND/cp)",
+                    yaxis_title="Giá (VND)", showlegend=False, height=320,
+                )
+                st.plotly_chart(fig_sotp_sc, use_container_width=True, key="sotp_scenarios_chart")
+            with col_sotp_tbl:
+                display_cols = [c for c in ["Scenario", "Fair_Price_VND", "Equity_Value"] if c in sotp_sc.columns]
+                st.dataframe(sotp_sc[display_cols], hide_index=True, use_container_width=True)
+    else:
+        st.info("Chưa có dữ liệu SoTP. Hãy chạy `python main.py` để tạo.")
+
+    # ── 3.6: P/E Forward Band ─────────────────────────────────────────
+    st.divider()
+    st.subheader("3.6 P/E Forward Band (Dải P/E Lịch sử + Dự phóng)")
+    st.warning("⚠️ **Vùng dự báo** — Forward EPS ước tính bằng CAGR 3 năm nội bộ, không phải consensus chuyên gia.")
+
+    pe_fwd = d["pe_fwd"]
+    if not pe_fwd.empty and "PE_Ratio" in pe_fwd.columns:
+        hist = pe_fwd[pe_fwd["is_forward"] == False].copy() if "is_forward" in pe_fwd.columns else pe_fwd.copy()
+        fwd = pe_fwd[pe_fwd["is_forward"] == True].copy() if "is_forward" in pe_fwd.columns else pd.DataFrame()
+
+        fig_pe = go.Figure()
+
+        # Historical P/E line (solid)
+        if not hist.empty:
+            fig_pe.add_trace(go.Scatter(
+                x=hist["Quarter"], y=hist["PE_Ratio"],
+                mode="lines+markers", name="P/E Lịch sử",
+                line=dict(color="#1565C0", width=2.5),
+                marker=dict(size=5),
+            ))
+
+        # Forward P/E line (dashed + shaded)
+        if not fwd.empty:
+            # Connect last historical point to forward
+            bridge_q = [hist["Quarter"].iloc[-1]] + fwd["Quarter"].tolist() if not hist.empty else fwd["Quarter"].tolist()
+            bridge_pe = [hist["PE_Ratio"].iloc[-1]] + fwd["PE_Ratio"].tolist() if not hist.empty else fwd["PE_Ratio"].tolist()
+            fig_pe.add_trace(go.Scatter(
+                x=bridge_q, y=bridge_pe,
+                mode="lines+markers", name="⚠️ P/E Forward (Ước tính)",
+                line=dict(color="#FF6F00", width=2.5, dash="dash"),
+                marker=dict(size=8, symbol="diamond"),
+            ))
+            # Shaded forward zone
+            fig_pe.add_vrect(
+                x0=fwd["Quarter"].iloc[0], x1=fwd["Quarter"].iloc[-1],
+                fillcolor="rgba(255,193,7,0.15)", line_width=0,
+                annotation_text="Vùng dự báo", annotation_position="top left",
+            )
+
+        # Band lines
+        if "PE_Upper" in pe_fwd.columns:
+            fig_pe.add_hline(y=pe_fwd["PE_Upper"].iloc[0], line_dash="dot", line_color="red",
+                             annotation_text=f"Đắt ({pe_fwd['PE_Upper'].iloc[0]:.1f})")
+            fig_pe.add_hline(y=pe_fwd["PE_Lower"].iloc[0], line_dash="dot", line_color="green",
+                             annotation_text=f"Rẻ ({pe_fwd['PE_Lower'].iloc[0]:.1f})")
+            fig_pe.add_hline(y=pe_fwd["PE_Median"].iloc[0], line_dash="dash", line_color="gray",
+                             annotation_text=f"Trung vị ({pe_fwd['PE_Median'].iloc[0]:.1f})")
+
+        fig_pe.update_layout(
+            title="P/E Band Lịch sử 5 năm + Forward Projection",
+            xaxis_title="Quý", yaxis_title="P/E Ratio",
+            legend=dict(orientation="h", y=-0.2),
+            height=450,
+        )
+        st.plotly_chart(fig_pe, use_container_width=True, key="pe_forward_band_chart")
+
+        # EPS table with forward highlight
+        if "is_forward" in pe_fwd.columns:
+            display_pe = pe_fwd.tail(12)[["Quarter", "PE_Ratio", "EPS", "is_forward"]].copy()
+            display_pe["Loại"] = display_pe["is_forward"].map({True: "⚠️ Dự báo", False: "Lịch sử"})
+            st.dataframe(
+                display_pe[["Quarter", "PE_Ratio", "EPS", "Loại"]].style.apply(
+                    lambda row: ["background-color: #FFF9C4" if row["Loại"] == "⚠️ Dự báo" else "" for _ in row],
+                    axis=1
+                ),
+                hide_index=True, use_container_width=True,
+            )
+    else:
+        st.info("Chưa có P/E Forward Band. Hãy chạy `python main.py` để tạo.")
+
 
 # ═════════════════════════════════════════════════════════════════════════════
 # CHƯƠNG 4: Phân tích Cấu trúc & Chu kỳ
@@ -860,16 +1010,45 @@ with tab5:
             colors_v = {"MUA MẠNH": "🟢", "MUA": "🔵", "TRUNG LẬP": "🟡", "BÁN": "🔴"}
             icon = next((v for k, v in colors_v.items() if k in verdict.upper()), "⚪")
             st.metric("Khuyến nghị", f"{icon} {verdict}", f"Score: {score}/100")
-            st.info("💡 **Thang điểm:** > +40: MUA MẠNH | +15~+40: MUA | −15~+15: TRUNG LẬP | < −15: BÁN")
+            version = rec.get("Version", "v1")
+            if "3pillars" in str(version):
+                st.info("💡 **Composite Score v2 (3 Trụ cột):** Sức khỏe 30% + Tăng trưởng 35% + Định giá 35%")
+            else:
+                st.info("💡 **Thang điểm:** > +40: MUA MẠNH | +15~+40: MUA | −15~+15: TRUNG LẬP | < −15: BÁN")
             comps = rec.get("Components", {})
             if comps:
-                comp_df = pd.DataFrame(list(comps.items()), columns=["Thành phần", "Điểm"])
+                # Rename keys for Vietnamese display
+                name_map = {
+                    "Health_Score": "🏥 Sức khỏe (C1)",
+                    "Growth_Score": "📈 Tăng trưởng (C2)",
+                    "Valuation_Score": "💰 Định giá (C3)",
+                    "Seasonality_Score": "📅 Mùa vụ",
+                    "Price_Momentum_Score": "📊 Momentum Giá",
+                    "Revenue_Momentum_Score": "📈 Momentum DT",
+                    "Valuation_Band_Score": "💰 Band Định giá",
+                    "Volume_Surge_Score": "📊 Volume Surge",
+                }
+                comp_items = [(name_map.get(k, k), v) for k, v in comps.items()]
+                comp_df = pd.DataFrame(comp_items, columns=["Thành phần", "Điểm"])
                 fig_comp = px.bar(comp_df, x="Điểm", y="Thành phần", orientation="h",
-                                  title="Cơ cấu Composite Score", text_auto=".1f",
+                                  title="Cơ cấu Composite Score theo Trụ cột", text_auto=".1f",
                                   color="Điểm", color_continuous_scale="RdYlGn",
                                   color_continuous_midpoint=0)
                 fig_comp.update_layout(height=300, showlegend=False)
                 st.plotly_chart(fig_comp, use_container_width=True, key="comp_bars")
+
+        # ── IR Source Citation ────────────────────────────────────────
+        st.divider()
+        st.subheader("📋 Nguồn Dữ liệu Phân đoạn FPT")
+        st.markdown("""| Mảng | Doanh thu 2024 (tỷ VND) | Tỷ trọng | Tăng trưởng YoY |
+|:---|---:|---:|---:|
+| **Công nghệ** (Global IT + Domestic IT) | 39,110 | **62%** | +24.4% |
+| **Viễn thông** (FPT Telecom) | 16,906 | **27%** | +11.3% |
+| **Giáo dục & Khác** | 7,088 | **11%** | +15.1% |
+| **Tổng** | **62,849** | **100%** | **+19.4%** |
+
+*Nguồn: FPT 12M/2024 Earnings Release, FPT Annual Report 2024 — [fpt.com.vn](https://fpt.com.vn)*
+""")
     else:
         st.warning("Chưa có Composite Signal. Hãy chạy `python main.py` để tạo.")
 

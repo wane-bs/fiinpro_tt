@@ -18,8 +18,10 @@ from analyzer_ratios import run_ratio_analysis, run_vertical_analysis
 from analyzer_dupont import run_dupont_analysis
 from analyzer_cashflow import run_cashflow_analysis
 from analyzer_dcf import run_dcf_analysis
-from analyzer_valuation import run_valuation_analysis, run_multiples_valuation
+from analyzer_valuation import run_valuation_analysis, run_multiples_valuation, run_pe_forward_band
 from signal_engine import generate_composite_signal
+from segment_loader import load_segment_data
+from analyzer_sotp import run_sotp_valuation
 
 def main():
     # Accept data file path as optional CLI argument; default to data.xlsx in project root
@@ -93,7 +95,14 @@ def main():
     # Module 3.3: Multi-Multiple Valuation (P/E, P/B, EV/EBITDA)
     run_multiples_valuation(clean_data, output_dir)
     
-    # Run luồng 7 (Composite Signal)
+    # Module 3.5: SoTP Valuation (FPT Segment Analysis)
+    segment_result = load_segment_data(clean_data, source_file)
+    run_sotp_valuation(clean_data, segment_result, output_dir)
+    
+    # Module 3.6: P/E Forward Band
+    run_pe_forward_band(clean_data, output_dir)
+    
+    # Run luồng 7 (Composite Signal — 3 trụ cột v2)
     generate_composite_signal(output_dir)
     
     print("\nChương trình pipeline phân tích kết hợp định lượng đã kết thúc.")

@@ -360,3 +360,140 @@ def run_multiples_valuation(data_dict: dict, output_dir: str) -> pd.DataFrame:
 
     return result
 
+
+# ── Module 3.6: P/E Forward Band ─────────────────────────────────────
+
+def run_pe_forward_band(data_dict: dict, output_dir: str) -> pd.DataFrame:
+    """
+    Module 3.6 — P/E Forward Band.
+    Build historical P/E band (5 years) and project forward EPS using 3-year CAGR.
+    Forward data points are flagged with is_forward=True for dashboard highlighting.
+
+    Output: output/pe_forward_band.csv
+    """
+    print("\n--- MODULE 3.6: P/E FORWARD BAND ---")
+
+    chi_so = data_dict.get('chỉ số')
+    if chi_so is None:
+        print("  [WARN] Thiếu sheet 'chỉ số' — bỏ qua P/E Forward Band.")
+        return pd.DataFrame()
+
+    quarters = chi_so.columns[1:].tolist()
+    pe_series = _find_row_chi_so(chi_so, 'P/E cơ bản')
+    eps_series = _find_row_chi_so(chi_so, 'EPS cơ bản')
+
+    if pe_series is None or eps_series is None:
+        print("  [WARN] Không tìm thấy P/E hoặc EPS — bỏ qua.")
+        return pd.DataFrame()
+
+    result = pd.DataFrame({
+        'Quarter': quarters,
+        'PE_Ratio': pe_series.values.astype(float),
+        'EPS': eps_series.values.astype(float),
+        'is_forward': False,
+    })
+
+    result['PE_Ratio'] = pd.to_numeric(result['PE_Ratio'], errors='coerce')
+    result['EPS'] = pd.to_numeric(result['EPS'], errors='coerce')
+
+    # Clean: drop rows where both PE and EPS are NaN
+    result = result.dropna(subset=['PE_Ratio', 'EPS'], how='all').reset_index(drop=True)
+
+    if len(result) < 8:
+        print("  [WARN] Không đủ dữ liệu (<8 quý) — bỏ qua.")
+        return pd.DataFrame()
+
+    # Historical P/E Band (last 20 quarters = 5 years)
+    lookback = min(20, len(result))
+    recent = result.tail(lookback)
+
+    pe_mean = recent['PE_Ratio'].mean()
+    pe_std = recent['PE_Ratio'].std()
+    pe_median = recent['PE_Ratio'].median()
+
+    pe_upper = pe_mean + 1.5 * pe_std  # Expensive zone
+    pe_lower = max(pe_mean - 1.5 * pe_std, 0)  # Cheap zone
+
+    result['PE_Mean'] = pe_mean
+    result['PE_Upper'] = pe_upper
+    result['PE_Lower'] = pe_lower
+    result['PE_Median'] = pe_median
+
+    # Position within band (0=bottom, 1=top)
+    band_width = pe_upper - pe_lower
+    if band_width > 0:
+        result['PE_Band_Position'] = (result['PE_Ratio'] - pe_lower) / band_width
+    else:
+        result['PE_Band_Position'] = 0.5
+
+    # ── Forward EPS estimation (CAGR 3 years = 12 quarters) ──
+    eps_clean = result['EPS'].dropna()
+    if len(eps_clean) >= 12:
+        eps_now = eps_clean.iloc[-1]
+        eps_12q_ago = eps_clean.iloc[-12]
+        if eps_12q_ago > 0 and eps_now > 0:
+            cagr_3y = (eps_now / eps_12q_ago) ** (1 / 3) - 1
+        else:
+            cagr_3y = 0.10  # fallback 10%
+    else:
+        cagr_3y = 0.10
+        eps_now = eps_clean.iloc[-1] if len(eps_clean) > 0 else 1000
+
+    print(f"  CAGR 3 năm (EPS): {cagr_3y:.1%}")
+    print(f"  EPS hiện tại: {eps_now:,.0f} VND")
+
+    # Project 4 forward quarters
+    last_q_label = result['Quarter'].iloc[-1]
+    try:
+        q_num = int(last_q_label[1])
+        q_year = int(last_q_label.split('/')[1])
+    except Exception:
+        q_num, q_year = 4, 2025
+
+    forward_rows = []
+    for i in range(1, 5):
+        fwd_q = (q_num - 1 + i) % 4 + 1
+        fwd_y = q_year + (q_num - 1 + i) // 4
+        fwd_label = f"Q{fwd_q}/{fwd_y}"
+
+        # Forward EPS with quarterly CAGR
+        fwd_eps = eps_now * (1 + cagr_3y) ** (i / 4)
+        fwd_pe_implied = pe_median  # use median P/E as base assumption
+
+        forward_rows.append({
+            'Quarter': fwd_label,
+            'PE_Ratio': fwd_pe_implied,
+            'EPS': round(fwd_eps, 0),
+            'is_forward': True,
+            'PE_Mean': pe_mean,
+            'PE_Upper': pe_upper,
+            'PE_Lower': pe_lower,
+            'PE_Median': pe_median,
+            'PE_Band_Position': 0.5,  # neutral for forward
+        })
+
+    forward_df = pd.DataFrame(forward_rows)
+    result = pd.concat([result, forward_df], ignore_index=True)
+
+    # Fair price from forward P/E
+    fwd_eps_1y = eps_now * (1 + cagr_3y)
+    fair_price_pe = fwd_eps_1y * pe_median
+    fair_price_upper = fwd_eps_1y * pe_upper
+    fair_price_lower = fwd_eps_1y * pe_lower
+
+    print(f"  Forward EPS (1Y): {fwd_eps_1y:,.0f} VND")
+    print(f"  P/E Band: [{pe_lower:.1f} — {pe_median:.1f} — {pe_upper:.1f}]")
+    print(f"  ⚠️  Giá hợp lý (Forward P/E): {fair_price_lower:,.0f} — "
+          f"{fair_price_pe:,.0f} — {fair_price_upper:,.0f} VND")
+
+    # Round numeric columns
+    for col in ['PE_Ratio', 'EPS', 'PE_Mean', 'PE_Upper', 'PE_Lower', 'PE_Median', 'PE_Band_Position']:
+        if col in result.columns:
+            result[col] = result[col].round(2)
+
+    out_path = os.path.join(output_dir, 'pe_forward_band.csv')
+    result.to_csv(out_path, index=False)
+    print(f"  Đã lưu: {out_path}")
+
+    return result
+

@@ -1,17 +1,14 @@
 """
 signal_engine.py
 ================
-Tru cot 4: Multi-Signal Composite Score
+Tru cot 4: Multi-Signal Composite Score (FPT Upgraded v2)
 
-Ket hop cac tin hieu de dua ra khuyen nghi MUA / BAN / TRUNG LAP cuoi cung.
-Score nam trong khoang [-100, +100].
+Composite Score = 3 trụ cột gắn vào output 3 chương:
+  1. Sức khỏe tài chính (Chương 1): 30%
+  2. Tăng trưởng & Chu kỳ (Chương 2): 35%
+  3. Khoảng cách định giá (Chương 3): 35%
 
-Cac thanh phan:
-  1. Mua vu (Thang 4-5) [25%]
-  2. Momentum Gia thi truong [20%]
-  3. Revenue Momentum [20%]
-  4. Vi tri Gia vs Valuation Band [25%]
-  5. Volume Surge [10%]
+Score nằm trong khoảng [-100, +100].
 """
 
 import pandas as pd
@@ -28,127 +25,173 @@ def _load_csv(output_dir, filename):
     return pd.DataFrame()
 
 
-def _score_seasonality(last_quarter_label):
-    """
-    Kiem tra neu dang o Q1 hoac Q2 -> huong vao vung mua vu T4-T5.
-    Neu Q1 hoac Q2 -> Score 100.
-    Neu Q3 hoac Q4 -> Score -50 (vi qua mua vu, rui ro dieu chinh).
-    """
-    try:
-        q = int(last_quarter_label.split('/')[0][1])
-        if q in [1, 2]:
-            return 100
-        else:
-            return -50
-    except:
-        return 0
+def _load_json(output_dir, filename):
+    path = os.path.join(output_dir, filename)
+    if os.path.exists(path):
+        with open(path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return {}
 
 
-def _score_price_momentum(price_df):
+# ── Pillar 1: Financial Health (Chương 1) — 30% ──────────────────────
+
+def _score_health(ratios_df, preanalysis):
     """
-    Momentum = Log Return gan nhat (quy).
-    Neu return >= 10% -> 100
-    Neu return <= -10% -> -100
-    Giao dong tuyen tinh o giua.
+    Score from Current Ratio, D/E Ratio, and Audit Rate.
+    Each sub-score: max ±100, then averaged.
     """
-    if price_df.empty or 'TB_Gia_Ngay' not in price_df.columns:
-        return 0
-    if len(price_df) >= 2:
-        ret = price_df['TB_Gia_Ngay'].iloc[-1] / price_df['TB_Gia_Ngay'].iloc[-2] - 1
-        score = max(-100, min(100, ret * 10))  # 10% -> 100
-        return score
-    return 0
+    scores = []
+
+    # 1a. Current Ratio: >1.5 → +100, <0.8 → -100
+    if not ratios_df.empty and 'Current_Ratio' in ratios_df.columns:
+        cr = ratios_df['Current_Ratio'].iloc[-1]
+        if not pd.isna(cr):
+            s = max(-100, min(100, (cr - 1.0) * 200))
+            scores.append(s)
+
+    # 1b. D/E Ratio: <1.0 → +100, >3.0 → -100
+    if not ratios_df.empty and 'DE_Ratio' in ratios_df.columns:
+        de = ratios_df['DE_Ratio'].iloc[-1]
+        if not pd.isna(de):
+            s = max(-100, min(100, (2.0 - de) * 100))
+            scores.append(s)
+
+    # 1c. Audit Rate: >50% → positive
+    if preanalysis:
+        audit_rate = preanalysis.get('audit_rate_pct', 0)
+        s = max(-100, min(100, (audit_rate - 50) * 2))
+        scores.append(s)
+
+    return float(np.mean(scores)) if scores else 0
 
 
-def _score_revenue_momentum(ratios_df):
+# ── Pillar 2: Growth & Cycle (Chương 2) — 35% ────────────────────────
+
+def _score_growth(ratios_df, dupont_df, cycle_df):
     """
-    Dua tren Rev_Momentum_3Q (rolling avg QoQ).
+    Score from Revenue Momentum, DuPont ΔROE, and Cycle Position.
     """
-    if ratios_df.empty or 'Rev_Momentum_3Q' not in ratios_df.columns:
-        return 0
-    mom = ratios_df['Rev_Momentum_3Q'].iloc[-1]
-    if pd.isna(mom):
-        return 0
-    # >10% QoQ avg -> 100, < 0% -> -100
-    score = max(-100, min(100, (mom - 5) * 10))
-    return float(score)
+    scores = []
+
+    # 2a. Revenue Momentum (3Q rolling average QoQ)
+    if not ratios_df.empty and 'Rev_Momentum_3Q' in ratios_df.columns:
+        mom = ratios_df['Rev_Momentum_3Q'].iloc[-1]
+        if not pd.isna(mom):
+            s = max(-100, min(100, (mom - 5) * 10))
+            scores.append(s)
+
+    # 2b. DuPont ΔROE: positive ΔRoE → bullish
+    if not dupont_df.empty and 'Delta_ROE' in dupont_df.columns:
+        delta_roe = dupont_df['Delta_ROE'].dropna()
+        if len(delta_roe) > 0:
+            recent_delta = delta_roe.iloc[-1]
+            s = max(-100, min(100, recent_delta * 20))  # 5% → +100
+            scores.append(s)
+
+    # 2c. Cycle Position: Z-score of Trend
+    if not cycle_df.empty and 'Trend' in cycle_df.columns:
+        trends = cycle_df['Trend'].dropna()
+        if len(trends) >= 4:
+            latest_trend = trends.iloc[-1]
+            mean_t = trends.mean()
+            std_t = trends.std()
+            if std_t > 0:
+                z = (latest_trend - mean_t) / std_t
+                s = max(-100, min(100, z * 40))
+                scores.append(s)
+
+    return float(np.mean(scores)) if scores else 0
 
 
-def _score_valuation_band(bands_df):
+# ── Pillar 3: Valuation Gap (Chương 3) — 35% ─────────────────────────
+
+def _score_valuation(bands_df, sotp_scenarios, pe_forward_df, price_df):
     """
-    Vi tri gia so voi dải Mean Reversion.
-    Band_Position: 0 = duoi Lower Band (UnderValued -> Score 100)
-    1 = tren Upper Band (OverValued -> Score -100)
-    0.5 = Fair Value (Score 0)
+    Score from Mean Reversion Band Position, SoTP Upside, P/E Forward vs Hist.
     """
-    if bands_df.empty or 'Band_Position' not in bands_df.columns:
-        return 0
-    pos = bands_df['Band_Position'].iloc[-1]
-    if pd.isna(pos):
-        return 0
-    # Map [0, 1] -> [100, -100]
-    score = (0.5 - pos) * 200
-    return max(-100, min(100, score))
+    scores = []
+    price_now = None
+
+    # Get current price
+    if not price_df.empty:
+        if 'TB_Gia_Ngay' in price_df.columns:
+            price_now = price_df['TB_Gia_Ngay'].iloc[-1]
+        elif 'Price' in price_df.columns:
+            price_now = price_df['Price'].iloc[-1]
+
+    # 3a. Mean Reversion Band Position
+    if not bands_df.empty and 'Band_Position' in bands_df.columns:
+        pos = bands_df['Band_Position'].iloc[-1]
+        if not pd.isna(pos):
+            s = (0.5 - pos) * 200  # 0=undervalued→+100, 1=overvalued→-100
+            scores.append(max(-100, min(100, s)))
+
+    # 3b. SoTP Upside (if available)
+    if not sotp_scenarios.empty and price_now is not None and price_now > 0:
+        base_row = sotp_scenarios[sotp_scenarios['Scenario'] == 'Base']
+        if not base_row.empty:
+            fair = base_row['Fair_Price_VND'].iloc[0]
+            if not pd.isna(fair) and fair > 0:
+                upside = (fair / price_now - 1) * 100
+                s = max(-100, min(100, upside * 2))  # 50% upside → +100
+                scores.append(s)
+
+    # 3c. P/E Forward Band Position
+    if not pe_forward_df.empty and 'PE_Band_Position' in pe_forward_df.columns:
+        hist_rows = pe_forward_df[pe_forward_df['is_forward'] == False]
+        if not hist_rows.empty:
+            pe_pos = hist_rows['PE_Band_Position'].iloc[-1]
+            if not pd.isna(pe_pos):
+                s = (0.5 - pe_pos) * 200
+                scores.append(max(-100, min(100, s)))
+
+    return float(np.mean(scores)) if scores else 0
 
 
-def _score_volume_surge(price_df):
-    """
-    So sanh quy hien tai voi trung binh 4 quy truoc.
-    """
-    if price_df.empty or 'TB_KhoiLuong_KhopLenh_Ngay' not in price_df.columns:
-        return 0
-    if len(price_df) < 5:
-        return 0
-    vol_now = price_df['TB_KhoiLuong_KhopLenh_Ngay'].iloc[-1]
-    vol_hist = price_df['TB_KhoiLuong_KhopLenh_Ngay'].iloc[-5:-1].mean()
-    if vol_hist == 0:
-        return 0
-    surge = vol_now / vol_hist - 1
-    # surge 50% -> score 100
-    score = max(-100, min(100, surge * 200))
-    return score
-
+# ── Entry Point ───────────────────────────────────────────────────────
 
 def generate_composite_signal(output_dir: str):
-    """Tinh toan Composite Score tu nhieu ban tin hieu."""
-    print("\n--- LUONG 7: MULTI-SIGNAL COMPOSITE SCORE ---")
+    """Tính toán Composite Score từ 3 trụ cột (Chương 1 + 2 + 3)."""
+    print("\n--- COMPOSITE SCORE v2: 3 TRỤ CỘT ---")
 
+    # Load all required data
     price_df = _load_csv(output_dir, 'aggregated_price_by_quarter.csv')
     ratios_df = _load_csv(output_dir, 'financial_ratios.csv')
     bands_df = _load_csv(output_dir, 'valuation_bands.csv')
+    dupont_df = _load_csv(output_dir, 'dupont_analysis.csv')
+    cycle_df = _load_csv(output_dir, 'cycle_decomposition.csv')
+    sotp_scenarios = _load_csv(output_dir, 'sotp_scenarios.csv')
+    pe_forward_df = _load_csv(output_dir, 'pe_forward_band.csv')
+    preanalysis = _load_json(output_dir, 'preanalysis_report.json')
 
     if price_df.empty:
-        print("  [ERROR] Thieu aggregated_price_by_quarter.csv")
+        print("  [ERROR] Thiếu aggregated_price_by_quarter.csv")
         return None
 
-    last_q = price_df.iloc[-1]['BCTC_Quarter_Label'] if 'BCTC_Quarter_Label' in price_df.columns else price_df.iloc[-1]['Quarter']
+    last_q = (price_df.iloc[-1]['BCTC_Quarter_Label']
+              if 'BCTC_Quarter_Label' in price_df.columns
+              else price_df.iloc[-1].get('Quarter', 'N/A'))
 
-    # --- Tinh toan tung phan ---
-    s_season = _score_seasonality(last_q)
-    s_price_mom = _score_price_momentum(price_df)
-    s_rev_mom = _score_revenue_momentum(ratios_df)
-    s_value = _score_valuation_band(bands_df)
-    s_vol = _score_volume_surge(price_df)
+    # ── Score each pillar ──
+    s_health = _score_health(ratios_df, preanalysis)
+    s_growth = _score_growth(ratios_df, dupont_df, cycle_df)
+    s_valuation = _score_valuation(bands_df, sotp_scenarios, pe_forward_df, price_df)
 
     # Weights
     w = {
-        'Seasonality': 0.25,
-        'Price_Momentum': 0.20,
-        'Revenue_Momentum': 0.20,
-        'Valuation': 0.25,
-        'Volume_Surge': 0.10
+        'Health': 0.30,
+        'Growth': 0.35,
+        'Valuation': 0.35,
     }
 
     composite_score = (
-        s_season * w['Seasonality'] +
-        s_price_mom * w['Price_Momentum'] +
-        s_rev_mom * w['Revenue_Momentum'] +
-        s_value * w['Valuation'] +
-        s_vol * w['Volume_Surge']
+        s_health * w['Health'] +
+        s_growth * w['Growth'] +
+        s_valuation * w['Valuation']
     )
     composite_score = round(composite_score, 1)
 
-    # --- Ra quyet dinh ---
+    # ── Verdict ──
     if composite_score >= 40:
         verdict = "MUA MẠNH"
         icon = "🟢"
@@ -171,45 +214,47 @@ def generate_composite_signal(output_dir: str):
         'Composite_Score': composite_score,
         'Verdict': verdict,
         'Components': {
-            'Seasonality_Score': round(s_season, 1),
-            'Price_Momentum_Score': round(s_price_mom, 1),
-            'Revenue_Momentum_Score': round(s_rev_mom, 1),
-            'Valuation_Band_Score': round(s_value, 1),
-            'Volume_Surge_Score': round(s_vol, 1)
+            'Health_Score': round(s_health, 1),
+            'Growth_Score': round(s_growth, 1),
+            'Valuation_Score': round(s_valuation, 1),
         },
-        'Weights': w
+        'Weights': w,
+        'Version': 'v2_3pillars',
     }
 
-    # Luu JSON
+    # Save JSON
     json_path = os.path.join(output_dir, 'recommendation.json')
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(details, f, indent=4, ensure_ascii=False)
 
-    # Luu CSV history append (neu can trong ung dung sau nay)
+    # Save CSV history
     csv_path = os.path.join(output_dir, 'composite_signal.csv')
     rec_df = pd.DataFrame([{
         'Quarter': last_q,
         'Composite_Score': composite_score,
-        'Seasonality_Score': round(s_season, 1),
-        'Valuation_Score': round(s_value, 1),
-        'Verdict': verdict
+        'Health_Score': round(s_health, 1),
+        'Growth_Score': round(s_growth, 1),
+        'Valuation_Score': round(s_valuation, 1),
+        'Verdict': verdict,
     }])
     if os.path.exists(csv_path):
         old_df = pd.read_csv(csv_path)
-        # remove duplicate for same quarter
         old_df = old_df[old_df['Quarter'] != last_q]
         rec_df = pd.concat([old_df, rec_df], ignore_index=True)
     rec_df.to_csv(csv_path, index=False)
 
+    print(f"  [TRỤ CỘT 1 — SỨC KHỎE]:    {s_health:+6.1f} × {w['Health']:.0%} = {s_health * w['Health']:+.1f}")
+    print(f"  [TRỤ CỘT 2 — TĂNG TRƯỞNG]:  {s_growth:+6.1f} × {w['Growth']:.0%} = {s_growth * w['Growth']:+.1f}")
+    print(f"  [TRỤ CỘT 3 — ĐỊNH GIÁ]:     {s_valuation:+6.1f} × {w['Valuation']:.0%} = {s_valuation * w['Valuation']:+.1f}")
+    print(f"  ═══════════════════════════════════════")
     print(f"  [COMPOSITE SCORE]: {composite_score:+.1f} / 100")
-    print(f"  [KHUYEN NGHI HOAT DONG]: {icon} {verdict}")
-    print(f"  Da luu: recommendation.json, composite_signal.csv")
+    print(f"  [KHUYẾN NGHỊ]:     {icon} {verdict}")
+    print(f"  Đã lưu: recommendation.json, composite_signal.csv")
 
     return details
 
 
 if __name__ == "__main__":
-    # Test doc lap
     script_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(script_dir)
     generate_composite_signal(os.path.join(project_root, 'output'))
